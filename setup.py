@@ -4,13 +4,13 @@ import os
 from setuptools import setup, find_packages
 
 DESCRIPTION = (
-    "Graphical interface to manage Linux applications (AppImage, Arch / AUR, Flatpak, Snap and Web)"
+    "Graphical interface to manage Linux Web - AppImage - Snap - Flatpak applications"
 )
 
-AUTHOR = "bauh developers"
-AUTHOR_EMAIL = "bauh4linux@gmail.com"
+AUTHOR = "Ion@TeLOS Linux for Debian, based on the work of bauh developers"
+AUTHOR_EMAIL = "teloslinux@protonmail.com"
 NAME = 'wasf'
-URL = "https://github.com/vinifmor/" + NAME
+URL = "https://github.com/iontelos/" + NAME
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -50,6 +50,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.8'
     ]
 )

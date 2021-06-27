@@ -12,9 +12,9 @@ class AURModuleTest(TestCase):
         expected_fields = {
             'pkgbase': 'wasf',
             'pkgname': 'wasf',
-            'pkgver': '0.9.6',
+            'pkgver': '0.1',
             'pkgrel': '2',
-            'url': 'https://github.com/vinifmor/wasf',
+            'url': 'https://github.com/iontelos/wasf',
             'arch': 'any',
             'license': 'zlib/libpng',
             'makedepends': ['git', 'python', 'python-pip', 'python-setuptools'],
@@ -27,7 +27,7 @@ class AURModuleTest(TestCase):
                 'python-lxml: for Native Web applications support',
                 'snapd: required for Snap support'
             ],
-            'source': ['https://github.com/vinifmor/wasf/archive/0.9.6.tar.gz'],
+            'source': ['https://github.com/iontelos/wasf/archive/0.1.tar.gz'],
             'sha512sums': ['cb1820b8a41dccec746d91d71b7f524c2e3caf6b30b0cd9666598b8ad49302654d9ce9bd1a0a2a9612afebc27ef78a2a94ac10e4e6c183742effe4feeabaa7b2']
         }
 

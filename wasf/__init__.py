@@ -1,5 +1,5 @@
-__version__ = '0.9.18'
-__app_name__ = 'wasf'
+__version__ = '2.0'
+__app_name__ = 'WASF'
 
 import os
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))

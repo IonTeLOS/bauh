@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=WASF Apps
+Name=WASF App Control
 Categories=System;
 Comment=Install and remove Web - AppImage - Snap and Flatpak applications
-Exec=/usr/bin/wasf
+Exec=/usr/local/bin/wasf
 Icon=wasf
