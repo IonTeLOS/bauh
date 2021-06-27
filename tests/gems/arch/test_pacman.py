@@ -2,7 +2,7 @@ import os
 import warnings
 from unittest import TestCase
 
-from bauh.gems.arch import pacman
+from wasf.gems.arch import pacman
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 

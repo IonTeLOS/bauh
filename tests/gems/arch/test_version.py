@@ -1,7 +1,7 @@
 import warnings
 from unittest import TestCase
 
-from bauh.gems.arch import version
+from wasf.gems.arch import version
 
 
 class MatchRequiredVersionTest(TestCase):

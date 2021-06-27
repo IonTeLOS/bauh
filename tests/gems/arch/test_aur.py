@@ -1,7 +1,7 @@
 import os
 from unittest import TestCase
 
-from bauh.gems.arch import aur
+from wasf.gems.arch import aur
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -10,11 +10,11 @@ class AURModuleTest(TestCase):
 
     def test_map_srcinfo__only_one_pkgname(self):
         expected_fields = {
-            'pkgbase': 'bauh',
-            'pkgname': 'bauh',
+            'pkgbase': 'wasf',
+            'pkgname': 'wasf',
             'pkgver': '0.9.6',
             'pkgrel': '2',
-            'url': 'https://github.com/vinifmor/bauh',
+            'url': 'https://github.com/vinifmor/wasf',
             'arch': 'any',
             'license': 'zlib/libpng',
             'makedepends': ['git', 'python', 'python-pip', 'python-setuptools'],
@@ -27,14 +27,14 @@ class AURModuleTest(TestCase):
                 'python-lxml: for Native Web applications support',
                 'snapd: required for Snap support'
             ],
-            'source': ['https://github.com/vinifmor/bauh/archive/0.9.6.tar.gz'],
+            'source': ['https://github.com/vinifmor/wasf/archive/0.9.6.tar.gz'],
             'sha512sums': ['cb1820b8a41dccec746d91d71b7f524c2e3caf6b30b0cd9666598b8ad49302654d9ce9bd1a0a2a9612afebc27ef78a2a94ac10e4e6c183742effe4feeabaa7b2']
         }
 
-        with open(FILE_DIR + '/resources/bauh_srcinfo') as f:
+        with open(FILE_DIR + '/resources/wasf_srcinfo') as f:
             srcinfo = f.read()
 
-        res = aur.map_srcinfo(srcinfo, 'bauh')
+        res = aur.map_srcinfo(srcinfo, 'wasf')
 
         for key, val in expected_fields.items():
             self.assertIn(key, res, "key '{}' not in res".format(key))
@@ -51,10 +51,10 @@ class AURModuleTest(TestCase):
             'pkgrel': '2'
         }
 
-        with open(FILE_DIR + '/resources/bauh_srcinfo') as f:
+        with open(FILE_DIR + '/resources/wasf_srcinfo') as f:
             srcinfo = f.read()
 
-        res = aur.map_srcinfo(srcinfo, 'bauh', fields={*expected_fields.keys()})
+        res = aur.map_srcinfo(srcinfo, 'wasf', fields={*expected_fields.keys()})
 
         self.assertEqual(len(expected_fields), len(res), "Expected: {}. Current: {}".format(len(expected_fields), len(res)))
 

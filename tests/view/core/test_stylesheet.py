@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from bauh import stylesheet
+from wasf import stylesheet
 
 
 class StylesheetTest(TestCase):

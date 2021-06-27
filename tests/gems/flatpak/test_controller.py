@@ -1,8 +1,8 @@
 from unittest import TestCase
 from unittest.mock import Mock
 
-from bauh.gems.flatpak.controller import FlatpakManager
-from bauh.gems.flatpak.model import FlatpakApplication
+from wasf.gems.flatpak.controller import FlatpakManager
+from wasf.gems.flatpak.model import FlatpakApplication
 
 
 class FlatpakManagerSortUpdateOrderTest(TestCase):
