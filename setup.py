@@ -9,7 +9,7 @@ DESCRIPTION = (
 
 AUTHOR = "bauh developers"
 AUTHOR_EMAIL = "bauh4linux@gmail.com"
-NAME = 'bauh'
+NAME = 'wasf'
 URL = "https://github.com/vinifmor/" + NAME
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
