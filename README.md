@@ -1,4 +1,4 @@
-**wasf** which is a fork of [**bauh**] (https://github.com/vinifmor/bauh) is a graphical interface for managing your Linux software (packages/applications). It currently supports the following formats: AppImage, ArchLinux repositories/AUR (when run in ArchLinux), Flatpak, Snap and Web applications.
+**wasf** which is a fork of [bauh](https://github.com/vinifmor/bauh) is a graphical interface for managing your Linux software (packages/applications). It currently supports the following formats: AppImage, ArchLinux repositories/AUR (when run in ArchLinux), Flatpak, Snap and Web applications.
 
 Key features
 - A management panel where you can: search, install, uninstall, upgrade, downgrade and launch you applications (and more...)
@@ -7,7 +7,7 @@ Key features
 
 A wasf.deb package compatible with Debian Bullseye is coming soon
 
-wasf is being tested for possible default inclusion in [TeLOS Linux] (https://teloslinux.org)
+wasf is being tested for possible default inclusion in [TeLOS Linux](https://teloslinux.org)
 
 wasf specific info will be added as this project evolves.
 
