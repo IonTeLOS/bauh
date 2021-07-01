@@ -4,4 +4,4 @@ Name=WASF App Control
 Categories=System;
 Comment=Install and remove Web - AppImage - Snap and Flatpak applications
 Exec=/usr/local/bin/wasf
-Icon=wasf
+Icon=/usr/share/icons/hicolor/scalable/apps/wasf.svg

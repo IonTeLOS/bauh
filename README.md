@@ -1,10 +1,19 @@
-**bauh** (ba-oo), formerly known as **fpakman**, is a graphical interface for managing your Linux software (packages/applications). It currently supports the following formats: AppImage, ArchLinux repositories/AUR, Flatpak, Snap and Web applications.
+**wasf** which is a fork of [**bauh**] (https://github.com/vinifmor/bauh) is a graphical interface for managing your Linux software (packages/applications). It currently supports the following formats: AppImage, ArchLinux repositories/AUR (when run in ArchLinux), Flatpak, Snap and Web applications.
 
 Key features
 - A management panel where you can: search, install, uninstall, upgrade, downgrade and launch you applications (and more...)
 - Tray mode: it launches attached to the system tray and publishes notifications when there are software updates available
 - System backup: it integrates with [Timeshift](https://github.com/teejee2008/timeshift) to provide a simple and safe backup process before applying changes to your system
-- Custom themes: it's possible to customize the tool's style/appearance. More at [Custom themes](#custom_themes) 
+
+A wasf.deb package compatible with Debian Bullseye is coming soon
+
+wasf is being tested for possible default inclusion in [TeLOS Linux] (https://teloslinux.org)
+
+wasf specific info will be added as this project evolves.
+
+Following info applies to bauh at the time the project was forked.
+
+- Custom themes: it's possible to customize the tool's style/appearance. More at [Custom themes](#custom_themes)
 
 
 <p align="center">
@@ -38,7 +47,7 @@ Key features
 16. [Social media](#social)
 17. [Contributing](https://github.com/vinifmor/bauh/blob/master/CONTRIBUTING.md)
 
- 
+
 
 ### Installation
 
@@ -107,7 +116,7 @@ makepkg -si
 - `aria2`: multi-threaded downloads
 - `axel`: multi-threaded downloads alternative
 - `libappindicator-gtk2`: tray-mode (GTK2 desktop environments)
-- `libappindicator-gtk3`: tray-mode (GTK3 desktop environments) 
+- `libappindicator-gtk3`: tray-mode (GTK3 desktop environments)
 - `wget`, `sqlite`, `fuse2`, `fuse3`: AppImage support
 - `flatpak`: Flatpaks support
 - `snapd`: Snaps support
@@ -215,9 +224,9 @@ suggestions:
     the number of your machine processors (`-j${nproc}`).
 
     b) same as previous, but related to `COMPRESSXZ` and `COMPRESSZST` definitions (if '--threads=0' is not defined)
-    
-    c) `ccache` will be added to `BUILDENV` if it is installed on the system and already not defined 
-    
+
+    c) `ccache` will be added to `BUILDENV` if it is installed on the system and already not defined
+
     d) set the device CPUs to performance scaling governor
 
     Obs: For more information about them, have a look at [Makepkg](https://wiki.archlinux.org/index.php/Makepkg)
@@ -235,7 +244,7 @@ suggestions:
     - `Reinstall` (AUR only): rebuilds an installed package.
 
 - If you have AUR added as a repository on you pacman configuration, make sure to disable bauh's support (through the settings described below)
-- AUR package compilation may require additional installed packages to work properly. Some of them are defined on the field `optdepends` of the [PKGBUILD](https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=bauh) 
+- AUR package compilation may require additional installed packages to work properly. Some of them are defined on the field `optdepends` of the [PKGBUILD](https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=bauh)
 - **Repository packages currently do not support the following actions: Downgrade and History**
 - If some of your installed packages are not categorized, open a PullRequest to the **bauh-files** repository changing [categories.txt](https://github.com/vinifmor/bauh-files/blob/master/arch/categories.txt)
 - During bauh initialization a full AUR normalized index is saved at `~/.cache/bauh/arch/aur/index.txt`
@@ -250,7 +259,7 @@ sync_databases: true # package databases synchronization once a day before the f
 sync_databases_startup: true  # package databases synchronization once a day during startup
 clean_cached: true  # defines if old cached versions should be removed from the disk cache during a package uninstallation
 refresh_mirrors_startup: false # if the package mirrors should be refreshed during startup
-mirrors_sort_limit: 5  # defines the maximum number of mirrors that will be used for speed sorting. Use 0 for no limit or leave it blank to disable sorting. 
+mirrors_sort_limit: 5  # defines the maximum number of mirrors that will be used for speed sorting. Use 0 for no limit or leave it blank to disable sorting.
 repositories_mthread_download: false  # enable multi-threaded download for repository packages if aria2/axel is installed (otherwise pacman will download the packages). Default: false
 automatch_providers: true  # if a possible provider for a given package dependency exactly matches its name, it will be chosen instead of asking for the user to decide (false). Default: true.
 edit_aur_pkgbuild: false  # if the AUR PKGBUILD file should be displayed for edition before the make process. true (PKGBUILD will always be displayed for edition), false (PKGBUILD never will be displayed), null (a popup will ask if the user want to edit the PKGBUILD). Default: false.
@@ -277,8 +286,8 @@ installation_level: null # defines a default installation level: "user" or "syst
 
 #### <a name="type_snap">Snap</a>
 
-- Make sure **snapd** is properly installed and enabled on your system: https://snapcraft.io/docs/installing-snapd 
-- Extra actions: 
+- Make sure **snapd** is properly installed and enabled on your system: https://snapcraft.io/docs/installing-snapd
+- Extra actions:
     - `Refresh`: tries to update the current Snap application revision
     - `Change channel`: allows to change the Snap application channel
 - The configuration file is located at `~/.config/bauh/snap.yml` and it allows the following customizations:
@@ -330,14 +339,14 @@ allowing the application to launch automatically after the system's boot attache
 
 - Extra actions
     - `Clean installation environment`: removes all the installation environment folders (it does not remove installed apps)
- 
+
 - The configuration file is located at `~/.config/bauh/web.yml` and it allows the following customizations:
 
 ```
 environment:
   electron:
     version: null  # set a custom Electron version here (e.g: '6.1.4')
-  system: false  # set it to 'true' if you want to use the nativefier version globally installed on your system 
+  system: false  # set it to 'true' if you want to use the nativefier version globally installed on your system
   cache_exp: 24 # defines the period (in HOURS) in which the stored environment settings are considered valid. Use 0 so that they are always updated. Default: 24.
 
 suggestions:
@@ -412,34 +421,34 @@ boot:
 
 
 #### <a name="custom_themes">Custom themes</a>
-- Custom themes can be provided by adding their files at `~/.local/share/bauh/themes` (sub-folders are allowed). 
+- Custom themes can be provided by adding their files at `~/.local/share/bauh/themes` (sub-folders are allowed).
 - Themes are composed by 2 required and 1 optional files sharing the same name:
     - `my_theme.qss`: file with the qss rules. Full example: [light.qss](https://github.com/vinifmor/bauh/blob/master/bauh/view/resources/style/light/light.qss)
-    - `my_theme.meta`: file defining the theme's data. Full example: [light.meta](https://github.com/vinifmor/bauh/blob/master/bauh/view/resources/style/light/light.meta) 
+    - `my_theme.meta`: file defining the theme's data. Full example: [light.meta](https://github.com/vinifmor/bauh/blob/master/bauh/view/resources/style/light/light.meta)
         - available fields:
             - `name`: name that will be displayed on the interface. It supports translations by adding additional `name` fields with brackets and the language code (e.g: `name[es]=Mi tema`)
             - `description`: theme's description that will be displayed on the interface. It supports translations like `name` (e.g: description[es] = Mi tema).
             - `version`: theme's version. It just works as information at the moment. (e.g: 1.0)
             - `root_theme`: optional attribute that points to a theme that must be loaded before the theme. It supports the bauh's default theme keys (e.g: default, light, ...) or a file path (e.g: `/path/to/root/file.qss`).
-            - `abstract`: optional boolean attribute (true/false) that should only be used by themes that are not complete on their own and just work as a base (root) for other themes. Abstract themes are not displayed on the interface. Full example: [default.qss](https://github.com/vinifmor/bauh/blob/master/bauh/view/resources/style/default/default.qss) 
+            - `abstract`: optional boolean attribute (true/false) that should only be used by themes that are not complete on their own and just work as a base (root) for other themes. Abstract themes are not displayed on the interface. Full example: [default.qss](https://github.com/vinifmor/bauh/blob/master/bauh/view/resources/style/default/default.qss)
     - `my_theme.vars`: optional file defining `key=value` pairs of variables that will be available for the .qss file (can be referenced through the symbol **@**. e.g `@my_var`). Full example: [light.vars](https://github.com/vinifmor/bauh/blob/master/bauh/view/resources/style/light/light.vars)
-        - common theme variables available: 
+        - common theme variables available:
             - `style_dir`: path to the .qss file directory. Example: @style_dir/my_icon.svg
             - `images`: path to bauh's icons directory (gem icons are not available through this variable). Example: @images/logo.svg
 
 
 #### <a name="tray_icons">Tray icons</a>
 
-Priority: 
+Priority:
   1) Icon paths defined in **~/.config/bauh/config.yml**
   2) Icons from the system with the following names: `bauh_tray_default` and `bauh_tray_updates`
   3) Own packaged icons
 
-  
+
 #### <a name="cli">CLI (Command Line Interface)</a>
 
 - For now it only allows checking for software updates (`bauh-cli updates`).
-- To verify the available commands: `bauh-cli --help`. 
+- To verify the available commands: `bauh-cli --help`.
 - To list the command parameters: `bauh-cli [command] --help`. (e.g: `bauh-cli updates --help`)
 
 
