@@ -3,8 +3,8 @@ import shutil
 from pathlib import Path
 from typing import Set
 
-from wasf.commons import system
-from wasf.gems.arch import IGNORED_REBUILD_CHECK_FILE
+from waffles.commons import system
+from waffles.gems.arch import IGNORED_REBUILD_CHECK_FILE
 
 
 def is_installed() -> bool:

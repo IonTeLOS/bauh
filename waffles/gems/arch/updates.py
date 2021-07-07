@@ -4,16 +4,16 @@ import traceback
 from threading import Thread
 from typing import Dict, Set, List, Tuple, Iterable, Optional
 
-from wasf.api.abstract.controller import UpgradeRequirements, UpgradeRequirement
-from wasf.api.abstract.handler import ProcessWatcher
-from wasf.gems.arch import pacman, sorting
-from wasf.gems.arch.aur import AURClient
-from wasf.gems.arch.dependencies import DependenciesAnalyser
-from wasf.gems.arch.exceptions import PackageNotFoundException
-from wasf.gems.arch.model import ArchPackage
-from wasf.gems.arch.pacman import RE_DEP_OPERATORS
-from wasf.gems.arch.version import match_required_version
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.controller import UpgradeRequirements, UpgradeRequirement
+from waffles.api.abstract.handler import ProcessWatcher
+from waffles.gems.arch import pacman, sorting
+from waffles.gems.arch.aur import AURClient
+from waffles.gems.arch.dependencies import DependenciesAnalyser
+from waffles.gems.arch.exceptions import PackageNotFoundException
+from waffles.gems.arch.model import ArchPackage
+from waffles.gems.arch.pacman import RE_DEP_OPERATORS
+from waffles.gems.arch.version import match_required_version
+from waffles.view.util.translation import I18n
 
 
 class UpdateRequirementsContext:
