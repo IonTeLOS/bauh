@@ -8,7 +8,7 @@ from waffles.commons import resource
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOCAL_PATH = '{}/.local/share/waffles/appimage'.format(str(Path.home()))
 INSTALLATION_PATH = LOCAL_PATH + '/installed/'
-SUGGESTIONS_FILE = 'https://raw.githubusercontent.com/vinifmor/bauh-files/master/appimage/suggestions.txt'
+SUGGESTIONS_FILE = 'https://raw.githubusercontent.com/iontelos/waffles-files/master/appimage/suggestions.txt'
 CONFIG_FILE = '{}/appimage.yml'.format(CONFIG_PATH)
 CONFIG_DIR = '{}/appimage'.format(CONFIG_PATH)
 UPDATES_IGNORED_FILE = '{}/updates_ignored.txt'.format(CONFIG_DIR)
