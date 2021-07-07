@@ -1,15 +1,15 @@
-**wasf**, which is a fork of [bauh](https://github.com/vinifmor/bauh), is a graphical interface for managing your Linux software (packages/applications). It currently supports the following formats: AppImage, ArchLinux repositories/AUR (when run in ArchLinux), Flatpak, Snap and Web applications.
+**waffles**, which is a fork of [bauh](https://github.com/vinifmor/bauh), is a graphical interface for managing your Linux software (packages/applications). It currently supports the following formats: AppImage, ArchLinux repositories/AUR (when run in ArchLinux), Flatpak, Snap and Web applications.
 
 Key features
 - A management panel where you can: search, install, uninstall, upgrade, downgrade and launch you applications (and more...)
 - Tray mode: it launches attached to the system tray and publishes notifications when there are software updates available
 - System backup: it integrates with [Timeshift](https://github.com/teejee2008/timeshift) to provide a simple and safe backup process before applying changes to your system
 
-A wasf.deb package compatible with Debian Bullseye is coming soon
+A waffles.deb package compatible with Debian Bullseye is coming soon
 
-wasf is being tested for possible default inclusion in [TeLOS Linux](https://teloslinux.org)
+waffles is being tested for possible default inclusion in [TeLOS Linux](https://teloslinux.org)
 
-wasf specific info will be added as this project evolves.
+waffles specific info will be added as this project evolves.
 
 Following info applies to bauh at the time the project was forked.
 

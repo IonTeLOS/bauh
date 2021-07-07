@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=WASF App Control
+Name=waffles App Control
 Categories=System;
 Comment=Install and remove Web - AppImage - Snap and Flatpak applications
-Exec=/usr/local/bin/wasf
-Icon=/usr/share/icons/hicolor/scalable/apps/wasf.svg
+Exec=/usr/local/bin/waffles
+Icon=/usr/share/icons/hicolor/scalable/apps/waffles.svg

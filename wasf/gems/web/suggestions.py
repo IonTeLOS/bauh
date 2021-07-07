@@ -7,9 +7,9 @@ from pathlib import Path
 import requests
 import yaml
 
-from wasf.api.http import HttpClient
-from wasf.gems.web import URL_SUGGESTIONS, SUGGESTIONS_CACHE_FILE, SUGGESTIONS_CACHE_TS_FILE
-from wasf.view.util.translation import I18n
+from waffles.api.http import HttpClient
+from waffles.gems.web import URL_SUGGESTIONS, SUGGESTIONS_CACHE_FILE, SUGGESTIONS_CACHE_TS_FILE
+from waffles.view.util.translation import I18n
 
 
 class SuggestionsManager:

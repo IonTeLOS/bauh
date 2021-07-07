@@ -1,6 +1,6 @@
 from typing import List, Tuple, Optional
 
-from wasf.api.abstract.view import SelectViewType, InputOption, SingleSelectComponent
+from waffles.api.abstract.view import SelectViewType, InputOption, SingleSelectComponent
 
 
 def new_select(label: str, tip: str, id_: str, opts: List[Tuple[Optional[str], object, Optional[str]]], value: object, max_width: int,

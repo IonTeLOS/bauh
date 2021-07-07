@@ -6,9 +6,9 @@ import traceback
 import urllib3
 from PyQt5.QtCore import QCoreApplication, Qt
 
-from wasf import __app_name__, app_args
-from wasf.view.core.config import CoreConfigManager
-from wasf.view.util import logs
+from waffles import __app_name__, app_args
+from waffles.view.core.config import CoreConfigManager
+from waffles.view.util import logs
 
 
 def main(tray: bool = False):
@@ -44,10 +44,10 @@ def main(tray: bool = False):
         QCoreApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
 
     if tray or bool(args.tray):
-        from wasf.tray import new_tray_icon
+        from waffles.tray import new_tray_icon
         app, widget = new_tray_icon(app_config, logger)
     else:
-        from wasf.manage import new_manage_panel
+        from waffles.manage import new_manage_panel
         app, widget = new_manage_panel(args, app_config, logger)
 
     widget.show()

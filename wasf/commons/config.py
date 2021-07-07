@@ -7,8 +7,8 @@ from typing import Optional
 
 import yaml
 
-from wasf.api.constants import CONFIG_PATH
-from wasf.commons import util
+from waffles.api.constants import CONFIG_PATH
+from waffles.commons import util
 
 
 def read_config(file_path: str, template: dict, update_file: bool = False, update_async: bool = False) -> dict:

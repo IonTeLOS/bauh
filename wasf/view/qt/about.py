@@ -3,12 +3,12 @@ from glob import glob
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QVBoxLayout, QDialog, QLabel, QWidget, QHBoxLayout, QSizePolicy, QApplication
 
-from wasf import __version__, __app_name__, ROOT_DIR
-from wasf.context import generate_i18n
-from wasf.view.util import resource
+from waffles import __version__, __app_name__, ROOT_DIR
+from waffles.context import generate_i18n
+from waffles.view.util import resource
 
-PROJECT_URL = 'https://github.com/vinifmor/' + __app_name__
-LICENSE_URL = 'https://raw.githubusercontent.com/vinifmor/{}/master/LICENSE'.format(__app_name__)
+PROJECT_URL = 'https://github.com/iontelos/' + __app_name__
+LICENSE_URL = 'https://raw.githubusercontent.com/iontelos/{}/master/LICENSE'.format(__app_name__)
 
 
 class AboutDialog(QDialog):

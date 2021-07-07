@@ -4,20 +4,20 @@ from typing import Tuple
 
 from PyQt5.QtWidgets import QApplication, QWidget
 
-from wasf import ROOT_DIR, __app_name__
-from wasf.api.abstract.context import ApplicationContext
-from wasf.api.http import HttpClient
-from wasf.commons.internet import InternetChecker
-from wasf.context import generate_i18n, DEFAULT_I18N_KEY, new_qt_application
-from wasf.view.core import gems
-from wasf.view.core.controller import GenericSoftwareManager
-from wasf.view.core.downloader import AdaptableFileDownloader
-from wasf.view.qt.prepare import PreparePanel
-from wasf.view.qt.settings import SettingsWindow
-from wasf.view.qt.window import ManageWindow
-from wasf.view.util import resource, util
-from wasf.view.util.cache import CacheCleaner, DefaultMemoryCacheFactory
-from wasf.view.util.disk import DefaultDiskCacheLoaderFactory
+from waffles import ROOT_DIR, __app_name__
+from waffles.api.abstract.context import ApplicationContext
+from waffles.api.http import HttpClient
+from waffles.commons.internet import InternetChecker
+from waffles.context import generate_i18n, DEFAULT_I18N_KEY, new_qt_application
+from waffles.view.core import gems
+from waffles.view.core.controller import GenericSoftwareManager
+from waffles.view.core.downloader import AdaptableFileDownloader
+from waffles.view.qt.prepare import PreparePanel
+from waffles.view.qt.settings import SettingsWindow
+from waffles.view.qt.window import ManageWindow
+from waffles.view.util import resource, util
+from waffles.view.util.cache import CacheCleaner, DefaultMemoryCacheFactory
+from waffles.view.util.disk import DefaultDiskCacheLoaderFactory
 
 
 def new_manage_panel(app_args: Namespace, app_config: dict, logger: logging.Logger) -> Tuple[QApplication, QWidget]:

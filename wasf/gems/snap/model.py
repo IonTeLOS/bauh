@@ -1,8 +1,8 @@
 from typing import List, Optional, Set
 
-from wasf.api.abstract.model import SoftwarePackage, CustomSoftwareAction
-from wasf.commons import resource
-from wasf.gems.snap import ROOT_DIR
+from waffles.api.abstract.model import SoftwarePackage, CustomSoftwareAction
+from waffles.commons import resource
+from waffles.gems.snap import ROOT_DIR
 
 
 class SnapApplication(SoftwarePackage):

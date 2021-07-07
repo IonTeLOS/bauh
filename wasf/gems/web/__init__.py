@@ -1,12 +1,12 @@
 import os
 from pathlib import Path
 
-from wasf.api.constants import DESKTOP_ENTRIES_DIR, CONFIG_PATH, TEMP_DIR, CACHE_PATH
-from wasf.commons import resource
-from wasf.commons.util import map_timestamp_file
+from waffles.api.constants import DESKTOP_ENTRIES_DIR, CONFIG_PATH, TEMP_DIR, CACHE_PATH
+from waffles.commons import resource
+from waffles.commons.util import map_timestamp_file
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-WEB_PATH = '{}/.local/share/wasf/web'.format(Path.home())
+WEB_PATH = '{}/.local/share/waffles/web'.format(Path.home())
 WEB_CACHE_PATH = '{}/web'.format(CACHE_PATH)
 INSTALLED_PATH = '{}/installed'.format(WEB_PATH)
 ENV_PATH = '{}/env'.format(WEB_PATH)
@@ -23,7 +23,7 @@ ELECTRON_SHA256_URL = 'https://github.com/electron/electron/releases/download/v{
 ELECTRON_WIDEVINE_URL = 'https://github.com/castlabs/electron-releases/releases/download/v{version}-wvvmp/electron-v{version}-wvvmp-linux-{arch}.zip'
 ELECTRON_WIDEVINE_SHA256_URL = 'https://github.com/castlabs/electron-releases/releases/download/v{version}-wvvmp/SHASUMS256.txt'
 URL_ENVIRONMENT_SETTINGS = 'https://raw.githubusercontent.com/vinifmor/bauh-files/master/web/env/v1/environment.yml'
-DESKTOP_ENTRY_PATH_PATTERN = DESKTOP_ENTRIES_DIR + '/wasf.web.{name}.desktop'
+DESKTOP_ENTRY_PATH_PATTERN = DESKTOP_ENTRIES_DIR + '/waffles.web.{name}.desktop'
 URL_FIX_PATTERN = "https://raw.githubusercontent.com/vinifmor/bauh-files/master/web/fix/{url}.js"
 URL_SUGGESTIONS = "https://raw.githubusercontent.com/vinifmor/bauh-files/master/web/env/v1/suggestions.yml"
 UA_CHROME = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'

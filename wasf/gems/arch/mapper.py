@@ -2,11 +2,11 @@ import logging
 import os
 from typing import Optional
 
-from wasf.api.abstract.model import PackageStatus
-from wasf.api.http import HttpClient
-from wasf.gems.arch.model import ArchPackage
-from wasf.gems.arch.version import normalize_version
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.model import PackageStatus
+from waffles.api.http import HttpClient
+from waffles.gems.arch.model import ArchPackage
+from waffles.gems.arch.version import normalize_version
+from waffles.view.util.translation import I18n
 
 URL_PKG_DOWNLOAD = 'https://aur.archlinux.org/{}'
 

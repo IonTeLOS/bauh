@@ -16,29 +16,29 @@ import yaml
 from colorama import Fore
 from requests import exceptions, Response
 
-from wasf.api.abstract.context import ApplicationContext
-from wasf.api.abstract.controller import SoftwareManager, SearchResult, UpgradeRequirements, TransactionResult, \
+from waffles.api.abstract.context import ApplicationContext
+from waffles.api.abstract.controller import SoftwareManager, SearchResult, UpgradeRequirements, TransactionResult, \
     SoftwareAction
-from wasf.api.abstract.disk import DiskCacheLoader
-from wasf.api.abstract.handler import ProcessWatcher, TaskManager
-from wasf.api.abstract.model import SoftwarePackage, CustomSoftwareAction, PackageSuggestion, PackageUpdate, \
+from waffles.api.abstract.disk import DiskCacheLoader
+from waffles.api.abstract.handler import ProcessWatcher, TaskManager
+from waffles.api.abstract.model import SoftwarePackage, CustomSoftwareAction, PackageSuggestion, PackageUpdate, \
     PackageHistory, \
     SuggestionPriority, PackageStatus
-from wasf.api.abstract.view import MessageType, MultipleSelectComponent, InputOption, SingleSelectComponent, \
+from waffles.api.abstract.view import MessageType, MultipleSelectComponent, InputOption, SingleSelectComponent, \
     SelectViewType, TextInputComponent, FormComponent, FileChooserComponent, ViewComponent, PanelComponent
-from wasf.api.constants import DESKTOP_ENTRIES_DIR
-from wasf.commons import resource
-from wasf.commons.boot import CreateConfigFile
-from wasf.commons.html import bold
-from wasf.commons.system import ProcessHandler, get_dir_size, get_human_size_str, SimpleProcess
-from wasf.gems.web import INSTALLED_PATH, nativefier, DESKTOP_ENTRY_PATH_PATTERN, URL_FIX_PATTERN, ENV_PATH, UA_CHROME, \
+from waffles.api.constants import DESKTOP_ENTRIES_DIR
+from waffles.commons import resource
+from waffles.commons.boot import CreateConfigFile
+from waffles.commons.html import bold
+from waffles.commons.system import ProcessHandler, get_dir_size, get_human_size_str, SimpleProcess
+from waffles.gems.web import INSTALLED_PATH, nativefier, DESKTOP_ENTRY_PATH_PATTERN, URL_FIX_PATTERN, ENV_PATH, UA_CHROME, \
     SUGGESTIONS_CACHE_FILE, ROOT_DIR, TEMP_PATH, FIXES_PATH, ELECTRON_PATH, \
     get_icon_path
-from wasf.gems.web.config import WebConfigManager
-from wasf.gems.web.environment import EnvironmentUpdater, EnvironmentComponent
-from wasf.gems.web.model import WebApplication
-from wasf.gems.web.search import SearchIndexManager
-from wasf.gems.web.worker import SuggestionsManager, UpdateEnvironmentSettings, \
+from waffles.gems.web.config import WebConfigManager
+from waffles.gems.web.environment import EnvironmentUpdater, EnvironmentComponent
+from waffles.gems.web.model import WebApplication
+from waffles.gems.web.search import SearchIndexManager
+from waffles.gems.web.worker import SuggestionsManager, UpdateEnvironmentSettings, \
     SuggestionsLoader, SearchIndexGenerator
 
 try:
@@ -982,15 +982,15 @@ class WebApplicationManager(SoftwareManager):
     def clear_data(self, logs: bool = True):
         if os.path.exists(ENV_PATH):
             if logs:
-                print('[wasf][web] Deleting directory {}'.format(ENV_PATH))
+                print('[waffles][web] Deleting directory {}'.format(ENV_PATH))
 
             try:
                 shutil.rmtree(ENV_PATH)
                 if logs:
-                    print('{}[wasf][web] Directory {} deleted{}'.format(Fore.YELLOW, ENV_PATH, Fore.RESET))
+                    print('{}[waffles][web] Directory {} deleted{}'.format(Fore.YELLOW, ENV_PATH, Fore.RESET))
             except:
                 if logs:
-                    print('{}[wasf][web] An exception has happened when deleting {}{}'.format(Fore.RED, ENV_PATH, Fore.RESET))
+                    print('{}[waffles][web] An exception has happened when deleting {}{}'.format(Fore.RED, ENV_PATH, Fore.RESET))
                     traceback.print_exc()
 
     def get_settings(self, screen_width: int, screen_height: int) -> ViewComponent:

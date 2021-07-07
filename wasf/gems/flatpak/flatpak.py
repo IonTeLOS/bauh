@@ -8,10 +8,10 @@ from typing import List, Dict, Set, Iterable, Optional
 from packaging.version import Version
 from packaging.version import parse as parse_version
 
-from wasf.api.exception import NoInternetException
-from wasf.commons.system import new_subprocess, run_cmd, SimpleProcess, ProcessHandler
-from wasf.commons.util import size_to_byte
-from wasf.gems.flatpak import EXPORTS_PATH, VERSION_1_3, VERSION_1_2, VERSION_1_5
+from waffles.api.exception import NoInternetException
+from waffles.commons.system import new_subprocess, run_cmd, SimpleProcess, ProcessHandler
+from waffles.commons.util import size_to_byte
+from waffles.gems.flatpak import EXPORTS_PATH, VERSION_1_3, VERSION_1_2, VERSION_1_5
 
 RE_SEVERAL_SPACES = re.compile(r'\s+')
 RE_COMMIT = re.compile(r'(Latest commit|Commit)\s*:\s*(.+)')

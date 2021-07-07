@@ -4,9 +4,9 @@ from PyQt5.QtWidgets import QDialog, QVBoxLayout, QGroupBox, \
     QLineEdit, QLabel, QGridLayout, QPushButton, QPlainTextEdit, QScrollArea, QFrame, QWidget, QSizePolicy, \
     QHBoxLayout
 
-from wasf.api.abstract.cache import MemoryCache
-from wasf.view.qt.components import new_spacer
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.cache import MemoryCache
+from waffles.view.qt.components import new_spacer
+from waffles.view.util.translation import I18n
 
 IGNORED_ATTRS = {'name', '__app__'}
 

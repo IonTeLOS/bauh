@@ -1,13 +1,13 @@
 from typing import Set, List, Tuple, Dict, Optional
 
-from wasf.api.abstract.handler import ProcessWatcher
-from wasf.api.abstract.view import MultipleSelectComponent, InputOption, FormComponent, SingleSelectComponent, \
+from waffles.api.abstract.handler import ProcessWatcher
+from waffles.api.abstract.view import MultipleSelectComponent, InputOption, FormComponent, SingleSelectComponent, \
     SelectViewType
-from wasf.commons import resource
-from wasf.commons.html import bold
-from wasf.commons.system import get_human_size_str
-from wasf.gems.arch import ROOT_DIR, get_repo_icon_path, get_icon_path, pacman
-from wasf.view.util.translation import I18n
+from waffles.commons import resource
+from waffles.commons.html import bold
+from waffles.commons.system import get_human_size_str
+from waffles.gems.arch import ROOT_DIR, get_repo_icon_path, get_icon_path, pacman
+from waffles.view.util.translation import I18n
 
 
 def _get_repo_icon(repository: str):

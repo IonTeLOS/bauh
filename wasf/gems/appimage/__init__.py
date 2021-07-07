@@ -2,11 +2,11 @@ import os
 from pathlib import Path
 from typing import Optional
 
-from wasf.api.constants import CONFIG_PATH, CACHE_PATH
-from wasf.commons import resource
+from waffles.api.constants import CONFIG_PATH, CACHE_PATH
+from waffles.commons import resource
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-LOCAL_PATH = '{}/.local/share/wasf/appimage'.format(str(Path.home()))
+LOCAL_PATH = '{}/.local/share/waffles/appimage'.format(str(Path.home()))
 INSTALLATION_PATH = LOCAL_PATH + '/installed/'
 SUGGESTIONS_FILE = 'https://raw.githubusercontent.com/vinifmor/bauh-files/master/appimage/suggestions.txt'
 CONFIG_FILE = '{}/appimage.yml'.format(CONFIG_PATH)

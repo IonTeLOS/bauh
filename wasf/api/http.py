@@ -6,7 +6,7 @@ from typing import Optional
 import requests
 import yaml
 
-from wasf.commons import system
+from waffles.commons import system
 
 
 class HttpClient:

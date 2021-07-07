@@ -2,7 +2,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtWidgets import QWidget, QApplication
 
-from wasf.view.util import resource
+from waffles.view.util import resource
 
 
 def centralize(widget: QWidget):

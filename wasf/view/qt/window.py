@@ -11,40 +11,40 @@ from PyQt5.QtWidgets import QWidget, QVBoxLayout, QCheckBox, QHeaderView, QToolB
     QLabel, QPlainTextEdit, QProgressBar, QPushButton, QComboBox, QApplication, QListView, QSizePolicy, \
     QMenu, QHBoxLayout
 
-from wasf import LOGS_PATH
-from wasf.api.abstract.cache import MemoryCache
-from wasf.api.abstract.context import ApplicationContext
-from wasf.api.abstract.controller import SoftwareManager, SoftwareAction
-from wasf.api.abstract.model import SoftwarePackage
-from wasf.api.abstract.view import MessageType
-from wasf.api.http import HttpClient
-from wasf.commons import user
-from wasf.commons.html import bold
-from wasf.context import set_theme
-from wasf.stylesheet import read_all_themes_metadata, ThemeMetadata
-from wasf.view.core.config import CoreConfigManager
-from wasf.view.core.tray_client import notify_tray
-from wasf.view.qt import dialog, commons, qt_utils
-from wasf.view.qt.about import AboutDialog
-from wasf.view.qt.apps_table import PackagesTable, UpgradeToggleButton
-from wasf.view.qt.commons import sum_updates_displayed
-from wasf.view.qt.components import new_spacer, IconButton, QtComponentsManager, to_widget, QSearchBar, \
+from waffles import LOGS_PATH
+from waffles.api.abstract.cache import MemoryCache
+from waffles.api.abstract.context import ApplicationContext
+from waffles.api.abstract.controller import SoftwareManager, SoftwareAction
+from waffles.api.abstract.model import SoftwarePackage
+from waffles.api.abstract.view import MessageType
+from waffles.api.http import HttpClient
+from waffles.commons import user
+from waffles.commons.html import bold
+from waffles.context import set_theme
+from waffles.stylesheet import read_all_themes_metadata, ThemeMetadata
+from waffles.view.core.config import CoreConfigManager
+from waffles.view.core.tray_client import notify_tray
+from waffles.view.qt import dialog, commons, qt_utils
+from waffles.view.qt.about import AboutDialog
+from waffles.view.qt.apps_table import PackagesTable, UpgradeToggleButton
+from waffles.view.qt.commons import sum_updates_displayed
+from waffles.view.qt.components import new_spacer, IconButton, QtComponentsManager, to_widget, QSearchBar, \
     QCustomMenuAction, QCustomToolbar
-from wasf.view.qt.dialog import ConfirmationDialog
-from wasf.view.qt.history import HistoryDialog
-from wasf.view.qt.info import InfoDialog
-from wasf.view.qt.root import RootDialog
-from wasf.view.qt.screenshots import ScreenshotsDialog
-from wasf.view.qt.settings import SettingsWindow
-from wasf.view.qt.thread import UpgradeSelected, RefreshApps, UninstallPackage, DowngradePackage, ShowPackageInfo, \
+from waffles.view.qt.dialog import ConfirmationDialog
+from waffles.view.qt.history import HistoryDialog
+from waffles.view.qt.info import InfoDialog
+from waffles.view.qt.root import RootDialog
+from waffles.view.qt.screenshots import ScreenshotsDialog
+from waffles.view.qt.settings import SettingsWindow
+from waffles.view.qt.thread import UpgradeSelected, RefreshApps, UninstallPackage, DowngradePackage, ShowPackageInfo, \
     ShowPackageHistory, SearchPackages, InstallPackage, AnimateProgress, NotifyPackagesReady, FindSuggestions, \
     ListWarnings, \
     AsyncAction, LaunchPackage, ApplyFilters, CustomSoftwareAction, ShowScreenshots, CustomAction, \
     NotifyInstalledLoaded, \
     IgnorePackageUpdates, SaveTheme, StartAsyncAction
-from wasf.view.qt.view_model import PackageView, PackageViewStatus
-from wasf.view.util import util, resource
-from wasf.view.util.translation import I18n
+from waffles.view.qt.view_model import PackageView, PackageViewStatus
+from waffles.view.util import util, resource
+from waffles.view.util.translation import I18n
 
 DARK_ORANGE = '#FF4500'
 

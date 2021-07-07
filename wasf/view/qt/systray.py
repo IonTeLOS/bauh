@@ -13,34 +13,34 @@ from PyQt5.QtCore import QThread, pyqtSignal, QCoreApplication, QSize
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QSystemTrayIcon, QMenu
 
-from wasf import __app_name__, ROOT_DIR
-from wasf.api.abstract.model import PackageUpdate
-from wasf.api.http import HttpClient
-from wasf.commons.system import run_cmd
-from wasf.context import generate_i18n
-from wasf.view.core.tray_client import TRAY_CHECK_FILE
-from wasf.view.core.update import check_for_update
-from wasf.view.qt.about import AboutDialog
-from wasf.view.qt.qt_utils import load_resource_icon
-from wasf.view.util import util, resource
-from wasf.view.util.translation import I18n
+from waffles import __app_name__, ROOT_DIR
+from waffles.api.abstract.model import PackageUpdate
+from waffles.api.http import HttpClient
+from waffles.commons.system import run_cmd
+from waffles.context import generate_i18n
+from waffles.view.core.tray_client import TRAY_CHECK_FILE
+from waffles.view.core.update import check_for_update
+from waffles.view.qt.about import AboutDialog
+from waffles.view.qt.qt_utils import load_resource_icon
+from waffles.view.util import util, resource
+from waffles.view.util.translation import I18n
 
 
 def get_cli_path() -> str:
     venv = os.getenv('VIRTUAL_ENV')
 
     if venv:
-        cli_path = '{}/bin/wasf-cli'.format(venv)
+        cli_path = '{}/bin/waffles-cli'.format(venv)
 
         if os.path.exists(cli_path):
             return cli_path
     elif not sys.executable.startswith('/usr'):
-        cli_path = '{}/bin/wasf-cli'.format(sys.prefix)
+        cli_path = '{}/bin/waffles-cli'.format(sys.prefix)
 
         if os.path.exists(cli_path):
             return cli_path
     else:
-        return shutil.which('wasf-cli')
+        return shutil.which('waffles-cli')
 
 
 def list_updates(logger: logging.Logger) -> List[PackageUpdate]:
@@ -54,7 +54,7 @@ def list_updates(logger: logging.Logger) -> List[PackageUpdate]:
             logger.info("No updates found")
 
     else:
-        logger.warning('wasf-cli seems not to be installed')
+        logger.warning('waffles-cli seems not to be installed')
 
     return []
 
@@ -131,7 +131,7 @@ class TrayIcon(QSystemTrayIcon):
         if config['ui']['tray']['default_icon']:
             self.icon_default = QIcon(config['ui']['tray']['default_icon'])
         else:
-            self.icon_default = QIcon.fromTheme('wasf_tray_default')
+            self.icon_default = QIcon.fromTheme('waffles_tray_default')
 
         if self.icon_default.isNull():
             self.icon_default = load_resource_icon('img/logo.svg', 24)
@@ -139,7 +139,7 @@ class TrayIcon(QSystemTrayIcon):
         if config['ui']['tray']['updates_icon']:
             self.icon_updates = QIcon(config['ui']['tray']['updates_icon'])
         else:
-            self.icon_updates = QIcon.fromTheme('wasf_tray_updates')
+            self.icon_updates = QIcon.fromTheme('waffles_tray_updates')
 
         if self.icon_updates.isNull():
             self.icon_updates = load_resource_icon('img/logo_update.svg', 24)

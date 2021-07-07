@@ -8,18 +8,18 @@ from typing import List, Tuple, Optional, Dict
 
 from PyQt5.QtWidgets import QApplication, QStyleFactory
 
-from wasf import ROOT_DIR, __app_name__
-from wasf.api.abstract.controller import SoftwareManager
-from wasf.api.abstract.download import FileDownloader
-from wasf.api.abstract.view import ViewComponent, TabComponent, InputOption, TextComponent, MultipleSelectComponent, \
+from waffles import ROOT_DIR, __app_name__
+from waffles.api.abstract.controller import SoftwareManager
+from waffles.api.abstract.download import FileDownloader
+from waffles.api.abstract.view import ViewComponent, TabComponent, InputOption, TextComponent, MultipleSelectComponent, \
     PanelComponent, FormComponent, TabGroupComponent, SingleSelectComponent, SelectViewType, TextInputComponent, \
     FileChooserComponent, RangeInputComponent
-from wasf.commons.view_utils import new_select
-from wasf.view.core import timeshift
-from wasf.view.core.config import CoreConfigManager
-from wasf.view.core.downloader import AdaptableFileDownloader
-from wasf.view.util import translation
-from wasf.view.util.translation import I18n
+from waffles.commons.view_utils import new_select
+from waffles.view.core import timeshift
+from waffles.view.core.config import CoreConfigManager
+from waffles.view.core.downloader import AdaptableFileDownloader
+from waffles.view.util import translation
+from waffles.view.util.translation import I18n
 
 
 class GenericSettingsManager:

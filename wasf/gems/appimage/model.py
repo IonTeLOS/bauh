@@ -1,10 +1,10 @@
 import re
 from typing import List, Optional
 
-from wasf.api.abstract.model import SoftwarePackage, CustomSoftwareAction
-from wasf.commons import resource
-from wasf.gems.appimage import ROOT_DIR, INSTALLATION_PATH
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.model import SoftwarePackage, CustomSoftwareAction
+from waffles.commons import resource
+from waffles.gems.appimage import ROOT_DIR, INSTALLATION_PATH
+from waffles.view.util.translation import I18n
 
 RE_MANY_SPACES = re.compile(r'\s+')
 

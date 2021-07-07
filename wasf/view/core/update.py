@@ -4,11 +4,11 @@ from pathlib import Path
 
 from packaging.version import parse as parse_version
 
-from wasf import __app_name__, __version__
-from wasf.api.constants import CACHE_PATH
-from wasf.api.http import HttpClient
-from wasf.commons.html import bold, link
-from wasf.view.util.translation import I18n
+from waffles import __app_name__, __version__
+from waffles.api.constants import CACHE_PATH
+from waffles.api.http import HttpClient
+from waffles.commons.html import bold, link
+from waffles.view.util.translation import I18n
 
 
 def check_for_update(logger: logging.Logger, http_client: HttpClient, i18n: I18n, tray: bool = False) -> str:
@@ -17,12 +17,12 @@ def check_for_update(logger: logging.Logger, http_client: HttpClient, i18n: I18n
     :param http_client:
     :param i18n:
     :param file_prefix: notification file prefix
-    :return: wasf update warning string or 'None' if no update is available
+    :return: waffles update warning string or 'None' if no update is available
     """
     logger.info("Checking for updates")
 
     try:
-        releases = http_client.get_json('https://api.github.com/repos/iontelos/wasf/releases')
+        releases = http_client.get_json('https://api.github.com/repos/iontelos/waffles/releases')
 
         if releases:
             latest = None

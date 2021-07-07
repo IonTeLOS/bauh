@@ -5,10 +5,10 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon, QCursor
 from PyQt5.QtWidgets import QDialog, QVBoxLayout, QTableWidget, QHeaderView, QLabel
 
-from wasf.api.abstract.cache import MemoryCache
-from wasf.api.abstract.model import PackageHistory
-from wasf.view.qt.view_model import PackageView
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.cache import MemoryCache
+from waffles.api.abstract.model import PackageHistory
+from waffles.view.qt.view_model import PackageView
+from waffles.view.util.translation import I18n
 
 
 class HistoryDialog(QDialog):

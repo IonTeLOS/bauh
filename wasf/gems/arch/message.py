@@ -1,9 +1,9 @@
 from typing import Iterable
 
-from wasf.api.abstract.handler import ProcessWatcher
-from wasf.api.abstract.view import MessageType
-from wasf.commons.html import bold
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.handler import ProcessWatcher
+from waffles.api.abstract.view import MessageType
+from waffles.commons.html import bold
+from waffles.view.util.translation import I18n
 
 
 def show_deps_not_installed(watcher: ProcessWatcher, pkgname: str, depnames: Iterable[str], i18n: I18n):

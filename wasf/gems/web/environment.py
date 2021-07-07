@@ -12,19 +12,19 @@ from typing import Dict, List, Optional
 import requests
 import yaml
 
-from wasf.api.abstract.download import FileDownloader
-from wasf.api.abstract.handler import ProcessWatcher, TaskManager
-from wasf.api.abstract.view import MessageType
-from wasf.api.http import HttpClient
-from wasf.commons import system
-from wasf.commons.html import bold
-from wasf.commons.system import SimpleProcess, ProcessHandler
-from wasf.gems.web import ENV_PATH, NODE_DIR_PATH, NODE_BIN_PATH, NODE_MODULES_PATH, NATIVEFIER_BIN_PATH, \
+from waffles.api.abstract.download import FileDownloader
+from waffles.api.abstract.handler import ProcessWatcher, TaskManager
+from waffles.api.abstract.view import MessageType
+from waffles.api.http import HttpClient
+from waffles.commons import system
+from waffles.commons.html import bold
+from waffles.commons.system import SimpleProcess, ProcessHandler
+from waffles.gems.web import ENV_PATH, NODE_DIR_PATH, NODE_BIN_PATH, NODE_MODULES_PATH, NATIVEFIER_BIN_PATH, \
     ELECTRON_PATH, ELECTRON_DOWNLOAD_URL, ELECTRON_SHA256_URL, URL_ENVIRONMENT_SETTINGS, NPM_BIN_PATH, NODE_PATHS, \
     nativefier, ELECTRON_WIDEVINE_URL, ELECTRON_WIDEVINE_SHA256_URL, \
     ENVIRONMENT_SETTINGS_CACHED_FILE, ENVIRONMENT_SETTINGS_TS_FILE, get_icon_path, NATIVEFIER_BASE_URL
-from wasf.gems.web.model import WebApplication
-from wasf.view.util.translation import I18n
+from waffles.gems.web.model import WebApplication
+from waffles.view.util.translation import I18n
 
 
 class EnvironmentComponent:

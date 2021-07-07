@@ -14,26 +14,26 @@ from typing import Set, Type, List, Tuple, Optional
 from colorama import Fore
 from packaging.version import parse as parse_version
 
-from wasf.api.abstract.context import ApplicationContext
-from wasf.api.abstract.controller import SoftwareManager, SearchResult, UpgradeRequirements, UpgradeRequirement, \
+from waffles.api.abstract.context import ApplicationContext
+from waffles.api.abstract.controller import SoftwareManager, SearchResult, UpgradeRequirements, UpgradeRequirement, \
     TransactionResult, SoftwareAction
-from wasf.api.abstract.disk import DiskCacheLoader
-from wasf.api.abstract.handler import ProcessWatcher, TaskManager
-from wasf.api.abstract.model import SoftwarePackage, PackageHistory, PackageUpdate, PackageSuggestion, \
+from waffles.api.abstract.disk import DiskCacheLoader
+from waffles.api.abstract.handler import ProcessWatcher, TaskManager
+from waffles.api.abstract.model import SoftwarePackage, PackageHistory, PackageUpdate, PackageSuggestion, \
     SuggestionPriority, CustomSoftwareAction
-from wasf.api.abstract.view import MessageType, ViewComponent, FormComponent, InputOption, SingleSelectComponent, \
+from waffles.api.abstract.view import MessageType, ViewComponent, FormComponent, InputOption, SingleSelectComponent, \
     SelectViewType, TextInputComponent, PanelComponent, FileChooserComponent, ViewObserver
-from wasf.commons import resource
-from wasf.commons.boot import CreateConfigFile
-from wasf.commons.html import bold
-from wasf.commons.system import SystemProcess, new_subprocess, ProcessHandler, run_cmd, SimpleProcess
-from wasf.gems.appimage import query, INSTALLATION_PATH, LOCAL_PATH, ROOT_DIR, \
+from waffles.commons import resource
+from waffles.commons.boot import CreateConfigFile
+from waffles.commons.html import bold
+from waffles.commons.system import SystemProcess, new_subprocess, ProcessHandler, run_cmd, SimpleProcess
+from waffles.gems.appimage import query, INSTALLATION_PATH, LOCAL_PATH, ROOT_DIR, \
     CONFIG_DIR, UPDATES_IGNORED_FILE, util, get_default_manual_installation_file_dir, DATABASE_APPS_FILE, \
     DATABASE_RELEASES_FILE, DESKTOP_ENTRIES_PATH, APPIMAGE_CACHE_PATH, get_icon_path
-from wasf.gems.appimage.config import AppImageConfigManager
-from wasf.gems.appimage.model import AppImage
-from wasf.gems.appimage.util import replace_desktop_entry_exec_command
-from wasf.gems.appimage.worker import DatabaseUpdater, SymlinksVerifier, AppImageSuggestionsDownloader
+from waffles.gems.appimage.config import AppImageConfigManager
+from waffles.gems.appimage.model import AppImage
+from waffles.gems.appimage.util import replace_desktop_entry_exec_command
+from waffles.gems.appimage.worker import DatabaseUpdater, SymlinksVerifier, AppImageSuggestionsDownloader
 
 RE_DESKTOP_ICON = re.compile(r'Icon\s*=\s*.+\n')
 RE_ICON_ENDS_WITH = re.compile(r'.+\.(png|svg)$')
@@ -598,7 +598,7 @@ class AppImageManager(SoftwareManager):
         return TransactionResult.fail()
 
     def _gen_desktop_entry_path(self, app: AppImage) -> str:
-        return '{}/wasf_appimage_{}.desktop'.format(DESKTOP_ENTRIES_PATH, app.get_clean_name())
+        return '{}/waffles_appimage_{}.desktop'.format(DESKTOP_ENTRIES_PATH, app.get_clean_name())
 
     def is_enabled(self) -> bool:
         return self.enabled
@@ -723,14 +723,14 @@ class AppImageManager(SoftwareManager):
         for f in glob.glob('{}/*.db'.format(LOCAL_PATH)):
             try:
                 if logs:
-                    print('[wasf][appimage] Deleting {}'.format(f))
+                    print('[waffles][appimage] Deleting {}'.format(f))
                 os.remove(f)
 
                 if logs:
-                    print('{}[wasf][appimage] {} deleted{}'.format(Fore.YELLOW, f, Fore.RESET))
+                    print('{}[waffles][appimage] {} deleted{}'.format(Fore.YELLOW, f, Fore.RESET))
             except:
                 if logs:
-                    print('{}[wasf][appimage] An exception has happened when deleting {}{}'.format(Fore.RED, f, Fore.RESET))
+                    print('{}[waffles][appimage] An exception has happened when deleting {}{}'.format(Fore.RED, f, Fore.RESET))
                     traceback.print_exc()
 
     def get_settings(self, screen_width: int, screen_height: int) -> ViewComponent:

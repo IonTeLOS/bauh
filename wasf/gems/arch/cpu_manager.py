@@ -4,7 +4,7 @@ import traceback
 from logging import Logger
 from typing import Optional, Set, Tuple, Dict
 
-from wasf.commons.system import new_root_subprocess
+from waffles.commons.system import new_root_subprocess
 
 
 def supports_performance_mode():
@@ -24,7 +24,7 @@ def current_governors() -> Dict[str, Set[int]]:
 
 
 def set_governor(governor: str, root_password: str, cpu_idxs: Optional[Set[int]] = None):
-    new_gov_file = '/tmp/wasf_scaling_governor'
+    new_gov_file = '/tmp/waffles_scaling_governor'
     with open(new_gov_file, 'w+') as f:
         f.write(governor)
 

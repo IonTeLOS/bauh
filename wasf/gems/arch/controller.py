@@ -16,39 +16,39 @@ from typing import List, Set, Type, Tuple, Dict, Iterable, Optional, Collection
 import requests
 from dateutil.parser import parse as parse_date
 
-from wasf.api.abstract.controller import SearchResult, SoftwareManager, ApplicationContext, UpgradeRequirements, \
+from waffles.api.abstract.controller import SearchResult, SoftwareManager, ApplicationContext, UpgradeRequirements, \
     TransactionResult, SoftwareAction
-from wasf.api.abstract.disk import DiskCacheLoader
-from wasf.api.abstract.handler import ProcessWatcher, TaskManager
-from wasf.api.abstract.model import PackageUpdate, PackageHistory, SoftwarePackage, PackageSuggestion, PackageStatus, \
+from waffles.api.abstract.disk import DiskCacheLoader
+from waffles.api.abstract.handler import ProcessWatcher, TaskManager
+from waffles.api.abstract.model import PackageUpdate, PackageHistory, SoftwarePackage, PackageSuggestion, PackageStatus, \
     SuggestionPriority, CustomSoftwareAction
-from wasf.api.abstract.view import MessageType, FormComponent, InputOption, SingleSelectComponent, SelectViewType, \
+from waffles.api.abstract.view import MessageType, FormComponent, InputOption, SingleSelectComponent, SelectViewType, \
     ViewComponent, PanelComponent, MultipleSelectComponent, TextInputComponent, TextInputType, \
     FileChooserComponent, TextComponent
-from wasf.api.constants import TEMP_DIR
-from wasf.api.exception import NoInternetException
-from wasf.commons import user, system
-from wasf.commons.boot import CreateConfigFile
-from wasf.commons.category import CategoriesDownloader
-from wasf.commons.html import bold
-from wasf.commons.system import SystemProcess, ProcessHandler, new_subprocess, run_cmd, SimpleProcess
-from wasf.commons.util import datetime_as_milis
-from wasf.commons.view_utils import new_select
-from wasf.gems.arch import aur, pacman, makepkg, message, confirmation, disk, git, \
+from waffles.api.constants import TEMP_DIR
+from waffles.api.exception import NoInternetException
+from waffles.commons import user, system
+from waffles.commons.boot import CreateConfigFile
+from waffles.commons.category import CategoriesDownloader
+from waffles.commons.html import bold
+from waffles.commons.system import SystemProcess, ProcessHandler, new_subprocess, run_cmd, SimpleProcess
+from waffles.commons.util import datetime_as_milis
+from waffles.commons.view_utils import new_select
+from waffles.gems.arch import aur, pacman, makepkg, message, confirmation, disk, git, \
     gpg, URL_CATEGORIES_FILE, CATEGORIES_FILE_PATH, CUSTOM_MAKEPKG_FILE, SUGGESTIONS_FILE, \
     get_icon_path, database, mirrors, sorting, cpu_manager, UPDATES_IGNORED_FILE, \
     CONFIG_DIR, EDITABLE_PKGBUILDS_FILE, URL_GPG_SERVERS, BUILD_DIR, rebuild_detector
-from wasf.gems.arch.aur import AURClient
-from wasf.gems.arch.config import get_build_dir, ArchConfigManager
-from wasf.gems.arch.dependencies import DependenciesAnalyser
-from wasf.gems.arch.download import MultithreadedDownloadService, ArchDownloadException
-from wasf.gems.arch.exceptions import PackageNotFoundException, PackageInHoldException
-from wasf.gems.arch.mapper import AURDataMapper
-from wasf.gems.arch.model import ArchPackage
-from wasf.gems.arch.output import TransactionStatusHandler
-from wasf.gems.arch.pacman import RE_DEP_OPERATORS
-from wasf.gems.arch.updates import UpdatesSummarizer
-from wasf.gems.arch.worker import AURIndexUpdater, ArchDiskCacheUpdater, ArchCompilationOptimizer, RefreshMirrors, \
+from waffles.gems.arch.aur import AURClient
+from waffles.gems.arch.config import get_build_dir, ArchConfigManager
+from waffles.gems.arch.dependencies import DependenciesAnalyser
+from waffles.gems.arch.download import MultithreadedDownloadService, ArchDownloadException
+from waffles.gems.arch.exceptions import PackageNotFoundException, PackageInHoldException
+from waffles.gems.arch.mapper import AURDataMapper
+from waffles.gems.arch.model import ArchPackage
+from waffles.gems.arch.output import TransactionStatusHandler
+from waffles.gems.arch.pacman import RE_DEP_OPERATORS
+from waffles.gems.arch.updates import UpdatesSummarizer
+from waffles.gems.arch.worker import AURIndexUpdater, ArchDiskCacheUpdater, ArchCompilationOptimizer, RefreshMirrors, \
     SyncDatabases
 
 URL_GIT = 'https://aur.archlinux.org/{}.git'

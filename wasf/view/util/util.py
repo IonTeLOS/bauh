@@ -9,11 +9,11 @@ from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtGui import QIcon
 from colorama import Fore
 
-from wasf import __app_name__
-from wasf.api.abstract.controller import SoftwareManager
-from wasf.api.constants import CACHE_PATH, CONFIG_PATH
-from wasf.commons.system import run_cmd
-from wasf.view.util import resource
+from waffles import __app_name__
+from waffles.api.abstract.controller import SoftwareManager
+from waffles.api.constants import CACHE_PATH, CONFIG_PATH
+from waffles.commons.system import run_cmd
+from waffles.view.util import resource
 
 
 def notify_user(msg: str, icon_path: str = None):
@@ -59,20 +59,20 @@ def get_distro():
 def clean_app_files(managers: List[SoftwareManager], logs: bool = True):
 
     if logs:
-        print('[wasf] Cleaning configuration and cache files')
+        print('[waffles] Cleaning configuration and cache files')
 
     for path in (CACHE_PATH, CONFIG_PATH):
         if logs:
-            print('[wasf] Deleting directory {}'.format(path))
+            print('[waffles] Deleting directory {}'.format(path))
 
         if os.path.exists(path):
             try:
                 shutil.rmtree(path)
                 if logs:
-                    print('{}[wasf] Directory {} deleted{}'.format(Fore.YELLOW, path, Fore.RESET))
+                    print('{}[waffles] Directory {} deleted{}'.format(Fore.YELLOW, path, Fore.RESET))
             except:
                 if logs:
-                    print('{}[wasf] An exception has happened when deleting {}{}'.format(Fore.RED, path, Fore.RESET))
+                    print('{}[waffles] An exception has happened when deleting {}{}'.format(Fore.RED, path, Fore.RESET))
                     traceback.print_exc()
 
     if managers:
@@ -80,4 +80,4 @@ def clean_app_files(managers: List[SoftwareManager], logs: bool = True):
             m.clear_data()
 
     if logs:
-        print('[wasf] Cleaning finished')
+        print('[waffles] Cleaning finished')

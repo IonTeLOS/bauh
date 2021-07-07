@@ -1,7 +1,7 @@
 from enum import Enum
 
-from wasf.api.abstract.model import SoftwarePackage, PackageStatus
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.model import SoftwarePackage, PackageStatus
+from waffles.view.util.translation import I18n
 
 
 class PackageViewStatus(Enum):

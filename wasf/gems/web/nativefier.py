@@ -1,8 +1,8 @@
 import shutil
 from typing import List, Optional
 
-from wasf.commons.system import SimpleProcess, run_cmd
-from wasf.gems.web import NATIVEFIER_BIN_PATH, NODE_PATHS
+from waffles.commons.system import SimpleProcess, run_cmd
+from waffles.gems.web import NATIVEFIER_BIN_PATH, NODE_PATHS
 
 
 def install(url: str, name: str, output_dir: str, electron_version: Optional[str], cwd: str, system: bool, extra_options: List[str] = None) -> SimpleProcess:

@@ -6,16 +6,16 @@ from PyQt5.QtCore import QSize, Qt, QCoreApplication, QThread, pyqtSignal
 from PyQt5.QtGui import QCursor
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QSizePolicy, QPushButton, QHBoxLayout, QApplication
 
-from wasf import __app_name__
-from wasf.api.abstract.controller import SoftwareManager
-from wasf.api.abstract.view import MessageType
-from wasf.view.core.controller import GenericSoftwareManager
-from wasf.view.qt import dialog
-from wasf.view.qt.components import to_widget, new_spacer
-from wasf.view.qt.dialog import ConfirmationDialog
-from wasf.view.qt.qt_utils import centralize
-from wasf.view.util import util
-from wasf.view.util.translation import I18n
+from waffles import __app_name__
+from waffles.api.abstract.controller import SoftwareManager
+from waffles.api.abstract.view import MessageType
+from waffles.view.core.controller import GenericSoftwareManager
+from waffles.view.qt import dialog
+from waffles.view.qt.components import to_widget, new_spacer
+from waffles.view.qt.dialog import ConfirmationDialog
+from waffles.view.qt.qt_utils import centralize
+from waffles.view.util import util
+from waffles.view.util.translation import I18n
 
 
 class ReloadManagePanel(QThread):

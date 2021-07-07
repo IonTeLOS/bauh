@@ -9,10 +9,10 @@ from typing import Dict, List, Optional
 
 import requests
 
-from wasf.api.abstract.controller import SoftwareManager
-from wasf.api.http import HttpClient
-from wasf.commons.internet import InternetChecker
-from wasf.commons.util import map_timestamp_file
+from waffles.api.abstract.controller import SoftwareManager
+from waffles.api.http import HttpClient
+from waffles.commons.internet import InternetChecker
+from waffles.commons.util import map_timestamp_file
 
 
 class CategoriesDownloader(Thread):

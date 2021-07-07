@@ -3,8 +3,8 @@ from pathlib import Path
 
 from packaging.version import parse as parse_version
 
-from wasf.api.constants import CONFIG_PATH
-from wasf.commons import resource
+from waffles.api.constants import CONFIG_PATH
+from waffles.commons import resource
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 SUGGESTIONS_FILE = 'https://raw.githubusercontent.com/vinifmor/bauh-files/master/flatpak/suggestions.txt'

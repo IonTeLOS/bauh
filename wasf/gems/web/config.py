@@ -1,5 +1,5 @@
-from wasf.commons.config import YAMLConfigManager
-from wasf.gems.web import CONFIG_FILE
+from waffles.commons.config import YAMLConfigManager
+from waffles.gems.web import CONFIG_FILE
 
 
 class WebConfigManager(YAMLConfigManager):

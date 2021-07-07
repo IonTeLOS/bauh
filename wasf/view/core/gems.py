@@ -3,9 +3,9 @@ import os
 import pkgutil
 from typing import List
 
-from wasf import ROOT_DIR
-from wasf.api.abstract.controller import SoftwareManager, ApplicationContext
-from wasf.view.util import translation
+from waffles import ROOT_DIR
+from waffles.api.abstract.controller import SoftwareManager, ApplicationContext
+from waffles.view.util import translation
 
 
 def find_manager(member):
@@ -24,7 +24,7 @@ def load_managers(locale: str, context: ApplicationContext, config: dict, defaul
 
     for f in os.scandir(ROOT_DIR + '/gems'):
         if f.is_dir() and f.name != '__pycache__':
-            loader = pkgutil.find_loader('wasf.gems.{}.controller'.format(f.name))
+            loader = pkgutil.find_loader('waffles.gems.{}.controller'.format(f.name))
 
             if loader:
                 module = loader.load_module()

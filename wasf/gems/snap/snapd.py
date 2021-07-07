@@ -8,7 +8,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.connection import HTTPConnection
 from urllib3.connectionpool import HTTPConnectionPool
 
-from wasf.commons.system import run_cmd
+from waffles.commons.system import run_cmd
 
 URL_BASE = 'http://snapd/v2'
 

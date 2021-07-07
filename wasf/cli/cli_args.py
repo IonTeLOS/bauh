@@ -1,7 +1,7 @@
 import argparse
 from argparse import Namespace
 
-from wasf import __app_name__, __version__
+from waffles import __app_name__, __version__
 
 
 def read() -> Namespace:

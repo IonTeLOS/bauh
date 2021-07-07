@@ -1,7 +1,7 @@
-from wasf.api.abstract.model import SoftwarePackage, PackageStatus
-from wasf.commons import resource
-from wasf.gems.flatpak import ROOT_DIR
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.model import SoftwarePackage, PackageStatus
+from waffles.commons import resource
+from waffles.gems.flatpak import ROOT_DIR
+from waffles.view.util.translation import I18n
 
 
 class FlatpakApplication(SoftwarePackage):

@@ -2,13 +2,13 @@ import traceback
 from io import StringIO
 from threading import Thread
 
-from wasf.api.abstract.cache import MemoryCache
-from wasf.api.abstract.context import ApplicationContext
-from wasf.api.abstract.controller import SoftwareManager
-from wasf.api.abstract.model import PackageStatus
-from wasf.api.http import HttpClient
-from wasf.gems.flatpak.constants import FLATHUB_API_URL, FLATHUB_URL
-from wasf.gems.flatpak.model import FlatpakApplication
+from waffles.api.abstract.cache import MemoryCache
+from waffles.api.abstract.context import ApplicationContext
+from waffles.api.abstract.controller import SoftwareManager
+from waffles.api.abstract.model import PackageStatus
+from waffles.api.http import HttpClient
+from waffles.gems.flatpak.constants import FLATHUB_API_URL, FLATHUB_URL
+from waffles.gems.flatpak.model import FlatpakApplication
 
 
 class FlatpakAsyncDataLoader(Thread):

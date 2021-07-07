@@ -7,9 +7,9 @@ from typing import Type, Dict
 
 import yaml
 
-from wasf.api.abstract.cache import MemoryCache
-from wasf.api.abstract.disk import DiskCacheLoader, DiskCacheLoaderFactory
-from wasf.api.abstract.model import SoftwarePackage
+from waffles.api.abstract.cache import MemoryCache
+from waffles.api.abstract.disk import DiskCacheLoader, DiskCacheLoaderFactory
+from waffles.api.abstract.model import SoftwarePackage
 
 
 class AsyncDiskCacheLoader(Thread, DiskCacheLoader):

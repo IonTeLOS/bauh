@@ -3,7 +3,7 @@ import time
 from threading import Lock, Thread
 from typing import Optional
 
-from wasf.api.abstract.cache import MemoryCache, MemoryCacheFactory
+from waffles.api.abstract.cache import MemoryCache, MemoryCacheFactory
 
 
 class DefaultMemoryCache(MemoryCache):

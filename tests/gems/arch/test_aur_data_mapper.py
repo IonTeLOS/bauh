@@ -2,8 +2,8 @@ import warnings
 from unittest import TestCase
 from unittest.mock import Mock
 
-from wasf.gems.arch.mapper import AURDataMapper
-from wasf.gems.arch.model import ArchPackage
+from waffles.gems.arch.mapper import AURDataMapper
+from waffles.gems.arch.model import ArchPackage
 
 
 class ArchDataMapperTest(TestCase):

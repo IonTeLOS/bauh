@@ -3,9 +3,9 @@ import time
 from threading import Thread
 from typing import Set
 
-from wasf.api.abstract.handler import ProcessWatcher
-from wasf.commons.html import bold
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.handler import ProcessWatcher
+from waffles.commons.html import bold
+from waffles.view.util.translation import I18n
 
 
 class TransactionStatusHandler(Thread):

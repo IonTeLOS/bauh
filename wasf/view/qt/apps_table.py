@@ -10,13 +10,13 @@ from PyQt5.QtNetwork import QNetworkAccessManager, QNetworkRequest, QNetworkRepl
 from PyQt5.QtWidgets import QTableWidget, QTableView, QMenu, QToolButton, QWidget, \
     QHeaderView, QLabel, QHBoxLayout, QToolBar, QSizePolicy
 
-from wasf.api.abstract.cache import MemoryCache
-from wasf.api.abstract.model import PackageStatus, CustomSoftwareAction
-from wasf.commons.html import strip_html, bold
-from wasf.view.qt.components import IconButton, QCustomMenuAction, QCustomToolbar
-from wasf.view.qt.dialog import ConfirmationDialog
-from wasf.view.qt.view_model import PackageView
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.cache import MemoryCache
+from waffles.api.abstract.model import PackageStatus, CustomSoftwareAction
+from waffles.commons.html import strip_html, bold
+from waffles.view.qt.components import IconButton, QCustomMenuAction, QCustomToolbar
+from waffles.view.qt.dialog import ConfirmationDialog
+from waffles.view.qt.view_model import PackageView
+from waffles.view.util.translation import I18n
 
 NAME_MAX_SIZE = 30
 DESC_MAX_SIZE = 40

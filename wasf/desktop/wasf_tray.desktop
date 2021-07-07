@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
-Name=WASF@tray
+Name=waffles@tray
 Categories=Utility;
 Comment=Install and remove Web - AppImage - Snap and Flatpak applications
-Exec=/usr/local/bin/wasf-tray
-Icon=/usr/share/icons/hicolor/scalable/apps/wasf.svg
+Exec=/usr/local/bin/waffles-tray
+Icon=/usr/share/icons/hicolor/scalable/apps/waffles.svg

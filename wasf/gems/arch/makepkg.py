@@ -2,8 +2,8 @@ import os
 import re
 from typing import Tuple, Optional, Set
 
-from wasf.commons.system import SimpleProcess, ProcessHandler, run_cmd
-from wasf.gems.arch import CUSTOM_MAKEPKG_FILE
+from waffles.commons.system import SimpleProcess, ProcessHandler, run_cmd
+from waffles.gems.arch import CUSTOM_MAKEPKG_FILE
 
 RE_DEPS_PATTERN = re.compile(r'\n?\s+->\s(.+)\n')
 RE_UNKNOWN_GPG_KEY = re.compile(r'\(unknown public key (\w+)\)')

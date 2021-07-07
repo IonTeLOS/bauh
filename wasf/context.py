@@ -6,10 +6,10 @@ from typing import Tuple
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtWidgets import QApplication
 
-from wasf import __app_name__, __version__
-from wasf.stylesheet import process_theme, read_default_themes, read_user_themes, read_theme_metada
-from wasf.view.util import util, translation
-from wasf.view.util.translation import I18n
+from waffles import __app_name__, __version__
+from waffles.stylesheet import process_theme, read_default_themes, read_user_themes, read_theme_metada
+from waffles.view.util import util, translation
+from waffles.view.util.translation import I18n
 
 DEFAULT_I18N_KEY = 'en'
 PROPERTY_HARDCODED_STYLESHEET = 'hcqss'

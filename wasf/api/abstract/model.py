@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from typing import List, Optional
 
-from wasf.api.constants import CACHE_PATH
+from waffles.api.constants import CACHE_PATH
 
 
 class CustomSoftwareAction:

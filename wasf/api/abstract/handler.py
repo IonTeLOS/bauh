@@ -1,6 +1,6 @@
 from typing import List, Tuple, Optional
 
-from wasf.api.abstract.view import MessageType, ViewComponent
+from waffles.api.abstract.view import MessageType, ViewComponent
 
 
 class ProcessWatcher:

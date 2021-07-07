@@ -7,8 +7,8 @@ from logging import Logger
 from pathlib import Path
 from typing import Optional
 
-from wasf.api.constants import CACHE_PATH
-from wasf.commons.system import ProcessHandler
+from waffles.api.constants import CACHE_PATH
+from waffles.commons.system import ProcessHandler
 
 SYNC_FILE = '{}/arch/db_sync'.format(CACHE_PATH)
 

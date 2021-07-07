@@ -1,7 +1,7 @@
 import os
 
-from wasf.api.constants import CACHE_PATH, CONFIG_PATH
-from wasf.commons import resource
+from waffles.api.constants import CACHE_PATH, CONFIG_PATH
+from waffles.commons import resource
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 SNAP_CACHE_PATH = CACHE_PATH + '/snap'

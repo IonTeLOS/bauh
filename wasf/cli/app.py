@@ -2,20 +2,20 @@ import os
 
 import urllib3
 
-from wasf import ROOT_DIR
-from wasf.api.abstract.context import ApplicationContext
-from wasf.api.http import HttpClient
-from wasf.cli import __app_name__, cli_args
-from wasf.cli.controller import CLIManager
-from wasf.commons.internet import InternetChecker
-from wasf.context import generate_i18n, DEFAULT_I18N_KEY
-from wasf.view.core import gems
-from wasf.view.core.config import CoreConfigManager
-from wasf.view.core.controller import GenericSoftwareManager
-from wasf.view.core.downloader import AdaptableFileDownloader
-from wasf.view.util import logs, util, resource
-from wasf.view.util.cache import DefaultMemoryCacheFactory
-from wasf.view.util.disk import DefaultDiskCacheLoaderFactory
+from waffles import ROOT_DIR
+from waffles.api.abstract.context import ApplicationContext
+from waffles.api.http import HttpClient
+from waffles.cli import __app_name__, cli_args
+from waffles.cli.controller import CLIManager
+from waffles.commons.internet import InternetChecker
+from waffles.context import generate_i18n, DEFAULT_I18N_KEY
+from waffles.view.core import gems
+from waffles.view.core.config import CoreConfigManager
+from waffles.view.core.controller import GenericSoftwareManager
+from waffles.view.core.downloader import AdaptableFileDownloader
+from waffles.view.util import logs, util, resource
+from waffles.view.util.cache import DefaultMemoryCacheFactory
+from waffles.view.util.disk import DefaultDiskCacheLoaderFactory
 
 
 def main():

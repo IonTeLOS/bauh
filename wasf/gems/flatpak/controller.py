@@ -9,24 +9,24 @@ from typing import List, Set, Type, Tuple, Optional
 
 from packaging.version import Version
 
-from wasf.api.abstract.controller import SearchResult, SoftwareManager, ApplicationContext, UpgradeRequirements, \
+from waffles.api.abstract.controller import SearchResult, SoftwareManager, ApplicationContext, UpgradeRequirements, \
     UpgradeRequirement, TransactionResult, SoftwareAction
-from wasf.api.abstract.disk import DiskCacheLoader
-from wasf.api.abstract.handler import ProcessWatcher, TaskManager
-from wasf.api.abstract.model import PackageHistory, PackageUpdate, SoftwarePackage, PackageSuggestion, \
+from waffles.api.abstract.disk import DiskCacheLoader
+from waffles.api.abstract.handler import ProcessWatcher, TaskManager
+from waffles.api.abstract.model import PackageHistory, PackageUpdate, SoftwarePackage, PackageSuggestion, \
     SuggestionPriority, PackageStatus
-from wasf.api.abstract.view import MessageType, FormComponent, SingleSelectComponent, InputOption, SelectViewType, \
+from waffles.api.abstract.view import MessageType, FormComponent, SingleSelectComponent, InputOption, SelectViewType, \
     ViewComponent, PanelComponent
-from wasf.commons import user
-from wasf.commons.boot import CreateConfigFile
-from wasf.commons.html import strip_html, bold
-from wasf.commons.system import ProcessHandler
-from wasf.gems.flatpak import flatpak, SUGGESTIONS_FILE, CONFIG_FILE, UPDATES_IGNORED_FILE, CONFIG_DIR, EXPORTS_PATH, \
+from waffles.commons import user
+from waffles.commons.boot import CreateConfigFile
+from waffles.commons.html import strip_html, bold
+from waffles.commons.system import ProcessHandler
+from waffles.gems.flatpak import flatpak, SUGGESTIONS_FILE, CONFIG_FILE, UPDATES_IGNORED_FILE, CONFIG_DIR, EXPORTS_PATH, \
     get_icon_path, VERSION_1_5, VERSION_1_4
-from wasf.gems.flatpak.config import FlatpakConfigManager
-from wasf.gems.flatpak.constants import FLATHUB_API_URL
-from wasf.gems.flatpak.model import FlatpakApplication
-from wasf.gems.flatpak.worker import FlatpakAsyncDataLoader, FlatpakUpdateLoader
+from waffles.gems.flatpak.config import FlatpakConfigManager
+from waffles.gems.flatpak.constants import FLATHUB_API_URL
+from waffles.gems.flatpak.model import FlatpakApplication
+from waffles.gems.flatpak.worker import FlatpakAsyncDataLoader, FlatpakUpdateLoader
 
 DATE_FORMAT = '%Y-%m-%dT%H:%M:%S.000Z'
 RE_INSTALL_REFS = re.compile(r'\d+\)\s+(.+)')

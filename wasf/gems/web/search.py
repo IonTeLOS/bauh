@@ -6,7 +6,7 @@ from typing import Optional
 
 import yaml
 
-from wasf.gems.web import SEARCH_INDEX_FILE
+from waffles.gems.web import SEARCH_INDEX_FILE
 
 
 class SearchIndexManager:

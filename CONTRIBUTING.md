@@ -23,9 +23,9 @@ The way to go here is to ask yourself if the improvement would be useful for mor
 
 # Adding a new translation
 * To add a new translation, you will have to create a file in each directory listed below named as the first two letters of the language in the ISO format (e.g: for 'english' would be 'en'):
-- `wasf/view/resources/locale`
-- `wasf/gems/appimage/resources/locale`
-- `wasf/gems/arch/resources/locale`
-- `wasf/gems/flatpak/resources/locale`
-- `wasf/gems/snap/resources/locale`
-- `wasf/gems/web/resources/locale`
+- `waffles/view/resources/locale`
+- `waffles/gems/appimage/resources/locale`
+- `waffles/gems/arch/resources/locale`
+- `waffles/gems/flatpak/resources/locale`
+- `waffles/gems/snap/resources/locale`
+- `waffles/gems/web/resources/locale`

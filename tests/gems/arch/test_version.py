@@ -1,7 +1,7 @@
 import warnings
 from unittest import TestCase
 
-from wasf.gems.arch import version
+from waffles.gems.arch import version
 
 
 class MatchRequiredVersionTest(TestCase):

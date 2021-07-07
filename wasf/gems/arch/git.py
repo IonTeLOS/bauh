@@ -2,8 +2,8 @@ import shutil
 from datetime import datetime
 from typing import List, Tuple, Optional
 
-from wasf.commons import system
-from wasf.commons.system import new_subprocess, SimpleProcess
+from waffles.commons import system
+from waffles.commons.system import new_subprocess, SimpleProcess
 
 
 def is_installed() -> bool:

@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from wasf.commons.config import YAMLConfigManager
-from wasf.gems.arch import CONFIG_FILE, BUILD_DIR
+from waffles.commons.config import YAMLConfigManager
+from waffles.gems.arch import CONFIG_FILE, BUILD_DIR
 
 
 def get_build_dir(arch_config: dict) -> str:

@@ -7,13 +7,13 @@ from PyQt5.QtGui import QIcon, QPixmap, QCursor
 from PyQt5.QtWidgets import QDialog, QLabel, QPushButton, QVBoxLayout, QProgressBar, QApplication, QWidget, \
     QSizePolicy, QHBoxLayout
 
-from wasf.api.abstract.cache import MemoryCache
-from wasf.api.http import HttpClient
-from wasf.view.qt import qt_utils
-from wasf.view.qt.components import new_spacer
-from wasf.view.qt.thread import AnimateProgress
-from wasf.view.qt.view_model import PackageView
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.cache import MemoryCache
+from waffles.api.http import HttpClient
+from waffles.view.qt import qt_utils
+from waffles.view.qt.components import new_spacer
+from waffles.view.qt.thread import AnimateProgress
+from waffles.view.qt.view_model import PackageView
+from waffles.view.util.translation import I18n
 
 
 class ScreenshotsDialog(QDialog):

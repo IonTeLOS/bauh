@@ -1,5 +1,5 @@
-from wasf.commons.config import YAMLConfigManager
-from wasf.gems.flatpak import CONFIG_FILE
+from waffles.commons.config import YAMLConfigManager
+from waffles.gems.flatpak import CONFIG_FILE
 
 
 class FlatpakConfigManager(YAMLConfigManager):

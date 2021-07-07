@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Iterable, List, Optional
 
-from wasf.api.abstract.handler import ProcessWatcher
+from waffles.api.abstract.handler import ProcessWatcher
 
 
 class FileDownloader(ABC):

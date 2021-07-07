@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from wasf import __app_name__
-from wasf.commons.config import YAMLConfigManager
+from waffles import __app_name__
+from waffles.commons.config import YAMLConfigManager
 
 FILE_PATH = '{}/.config/{}/config.yml'.format(str(Path.home()), __app_name__)
 

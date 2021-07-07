@@ -3,9 +3,9 @@ from logging import Logger
 from threading import Thread
 from typing import Optional
 
-from wasf.api.abstract.handler import TaskManager
-from wasf.commons.config import ConfigManager
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.handler import TaskManager
+from waffles.commons.config import ConfigManager
+from waffles.view.util.translation import I18n
 
 
 class CreateConfigFile(Thread):

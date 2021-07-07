@@ -5,10 +5,10 @@ from PyQt5.QtGui import QIcon, QCursor
 from PyQt5.QtWidgets import QMessageBox, QLabel, QWidget, QHBoxLayout, QDialog, QVBoxLayout, QSizePolicy, QApplication, \
     QStyle, QPushButton, QScrollArea, QFrame
 
-from wasf.api.abstract.view import MessageType
-from wasf.view.qt.components import new_spacer
-from wasf.view.util import resource
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.view import MessageType
+from waffles.view.qt.components import new_spacer
+from waffles.view.util import resource
+from waffles.view.util.translation import I18n
 
 MSG_TYPE_MAP = {
     MessageType.ERROR: QMessageBox.Critical,

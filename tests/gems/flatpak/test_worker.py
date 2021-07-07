@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from wasf.gems.flatpak.worker import FlatpakAsyncDataLoader
+from waffles.gems.flatpak.worker import FlatpakAsyncDataLoader
 
 
 class FlatpakAsyncDataLoaderTest(TestCase):

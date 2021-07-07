@@ -9,7 +9,7 @@ DESCRIPTION = (
 
 AUTHOR = "Ion@TeLOS Linux for Debian, based on the work of bauh developers"
 AUTHOR_EMAIL = "teloslinux@protonmail.com"
-NAME = 'wasf'
+NAME = 'waffles'
 URL = "https://github.com/iontelos/" + NAME
 
 file_dir = os.path.dirname(os.path.abspath(__file__))
@@ -51,6 +51,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.8'
+        'Programming Language :: Python :: 3.9'
     ]
 )

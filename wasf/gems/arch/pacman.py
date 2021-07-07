@@ -7,10 +7,10 @@ from typing import List, Set, Tuple, Dict, Iterable, Optional
 
 from colorama import Fore
 
-from wasf.commons import system
-from wasf.commons.system import run_cmd, new_subprocess, new_root_subprocess, SystemProcess, SimpleProcess
-from wasf.commons.util import size_to_byte
-from wasf.gems.arch.exceptions import PackageNotFoundException, PackageInHoldException
+from waffles.commons import system
+from waffles.commons.system import run_cmd, new_subprocess, new_root_subprocess, SystemProcess, SimpleProcess
+from waffles.commons.util import size_to_byte
+from waffles.gems.arch.exceptions import PackageNotFoundException, PackageInHoldException
 
 RE_DEPS = re.compile(r'[\w\-_]+:[\s\w_\-.]+\s+\[\w+]')
 RE_OPTDEPS = re.compile(r'[\w._\-]+\s*:')

@@ -7,22 +7,22 @@ from subprocess import Popen, STDOUT
 from threading import Thread
 from typing import List, Set, Type, Tuple, Dict
 
-from wasf.api.abstract.controller import SoftwareManager, SearchResult, ApplicationContext, UpgradeRequirements, \
+from waffles.api.abstract.controller import SoftwareManager, SearchResult, ApplicationContext, UpgradeRequirements, \
     UpgradeRequirement, TransactionResult, SoftwareAction
-from wasf.api.abstract.disk import DiskCacheLoader
-from wasf.api.abstract.handler import ProcessWatcher, TaskManager
-from wasf.api.abstract.model import SoftwarePackage, PackageUpdate, PackageHistory, PackageSuggestion, \
+from waffles.api.abstract.disk import DiskCacheLoader
+from waffles.api.abstract.handler import ProcessWatcher, TaskManager
+from waffles.api.abstract.model import SoftwarePackage, PackageUpdate, PackageHistory, PackageSuggestion, \
     CustomSoftwareAction
-from wasf.api.abstract.view import ViewComponent, TabGroupComponent, MessageType
-from wasf.api.exception import NoInternetException
-from wasf.commons.boot import CreateConfigFile
-from wasf.commons.html import bold
-from wasf.view.core.config import CoreConfigManager
-from wasf.view.core.settings import GenericSettingsManager
-from wasf.view.core.update import check_for_update
-from wasf.view.util import resource
-from wasf.view.util.resource import get_path
-from wasf.view.util.util import clean_app_files, restart_app
+from waffles.api.abstract.view import ViewComponent, TabGroupComponent, MessageType
+from waffles.api.exception import NoInternetException
+from waffles.commons.boot import CreateConfigFile
+from waffles.commons.html import bold
+from waffles.view.core.config import CoreConfigManager
+from waffles.view.core.settings import GenericSettingsManager
+from waffles.view.core.update import check_for_update
+from waffles.view.util import resource
+from waffles.view.util.resource import get_path
+from waffles.view.util.util import clean_app_files, restart_app
 
 RE_IS_URL = re.compile(r'^https?://.+')
 

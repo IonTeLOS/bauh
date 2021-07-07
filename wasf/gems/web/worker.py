@@ -5,14 +5,14 @@ from datetime import datetime
 from threading import Thread
 from typing import Optional
 
-from wasf.api.abstract.handler import TaskManager
-from wasf.commons.boot import CreateConfigFile
-from wasf.commons.html import bold
-from wasf.gems.web import get_icon_path
-from wasf.gems.web.environment import EnvironmentUpdater
-from wasf.gems.web.search import SearchIndexManager
-from wasf.gems.web.suggestions import SuggestionsManager
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.handler import TaskManager
+from waffles.commons.boot import CreateConfigFile
+from waffles.commons.html import bold
+from waffles.gems.web import get_icon_path
+from waffles.gems.web.environment import EnvironmentUpdater
+from waffles.gems.web.search import SearchIndexManager
+from waffles.gems.web.suggestions import SuggestionsManager
+from waffles.view.util.translation import I18n
 
 
 class SuggestionsLoader(Thread):

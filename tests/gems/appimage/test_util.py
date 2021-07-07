@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from wasf.gems.appimage.util import replace_desktop_entry_exec_command
+from waffles.gems.appimage.util import replace_desktop_entry_exec_command
 
 
 class TestUtil(TestCase):

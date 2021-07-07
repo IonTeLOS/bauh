@@ -8,12 +8,12 @@ from typing import List, Set, Type, Tuple, Optional
 
 import yaml
 
-from wasf.api.abstract.context import ApplicationContext
-from wasf.api.abstract.disk import DiskCacheLoader
-from wasf.api.abstract.handler import ProcessWatcher, TaskManager
-from wasf.api.abstract.model import SoftwarePackage, PackageUpdate, PackageHistory, PackageSuggestion, \
+from waffles.api.abstract.context import ApplicationContext
+from waffles.api.abstract.disk import DiskCacheLoader
+from waffles.api.abstract.handler import ProcessWatcher, TaskManager
+from waffles.api.abstract.model import SoftwarePackage, PackageUpdate, PackageHistory, PackageSuggestion, \
     CustomSoftwareAction
-from wasf.api.abstract.view import ViewComponent
+from waffles.api.abstract.view import ViewComponent
 
 
 class SearchResult:

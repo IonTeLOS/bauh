@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from wasf.gems.arch import sorting
+from waffles.gems.arch import sorting
 
 
 class SortingTest(TestCase):

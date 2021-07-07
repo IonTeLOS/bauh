@@ -1,8 +1,8 @@
 import os
 from pathlib import Path
 
-from wasf.api.constants import CACHE_PATH, CONFIG_PATH, TEMP_DIR
-from wasf.commons import resource
+from waffles.api.constants import CACHE_PATH, CONFIG_PATH, TEMP_DIR
+from waffles.commons import resource
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 BUILD_DIR = '{}/arch'.format(TEMP_DIR)
@@ -10,7 +10,7 @@ ARCH_CACHE_PATH = CACHE_PATH + '/arch'
 CATEGORIES_FILE_PATH = ARCH_CACHE_PATH + '/categories.txt'
 URL_CATEGORIES_FILE = 'https://raw.githubusercontent.com/vinifmor/bauh-files/master/arch/categories.txt'
 URL_GPG_SERVERS = 'https://raw.githubusercontent.com/vinifmor/bauh-files/master/arch/gpgservers.txt'
-CONFIG_DIR = '{}/.config/wasf/arch'.format(str(Path.home()))
+CONFIG_DIR = '{}/.config/waffles/arch'.format(str(Path.home()))
 CUSTOM_MAKEPKG_FILE = '{}/makepkg.conf'.format(CONFIG_DIR)
 AUR_INDEX_FILE = '{}/aur/index.txt'.format(ARCH_CACHE_PATH)
 AUR_INDEX_TS_FILE = '{}/aur/index.ts'.format(ARCH_CACHE_PATH)

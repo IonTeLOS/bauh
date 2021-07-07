@@ -1,6 +1,6 @@
 include LICENSE CHANGELOG.md README.md
 include requirements.txt
-recursive-include wasf/desktop *
-recursive-include wasf/view/resources *
-recursive-include wasf/gems/*/resources *
+recursive-include waffles/desktop *
+recursive-include waffles/view/resources *
+recursive-include waffles/gems/*/resources *
 recursive-include tests *

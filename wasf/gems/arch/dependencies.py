@@ -3,12 +3,12 @@ import traceback
 from threading import Thread
 from typing import Set, List, Tuple, Dict, Iterable, Optional
 
-from wasf.api.abstract.handler import ProcessWatcher
-from wasf.gems.arch import pacman, message, sorting, confirmation
-from wasf.gems.arch.aur import AURClient
-from wasf.gems.arch.exceptions import PackageNotFoundException
-from wasf.gems.arch.version import match_required_version
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.handler import ProcessWatcher
+from waffles.gems.arch import pacman, message, sorting, confirmation
+from waffles.gems.arch.aur import AURClient
+from waffles.gems.arch.exceptions import PackageNotFoundException
+from waffles.gems.arch.version import match_required_version
+from waffles.view.util.translation import I18n
 
 
 class DependenciesAnalyser:

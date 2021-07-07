@@ -12,23 +12,23 @@ from PyQt5.QtCore import QThread, pyqtSignal, QObject
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget
 
-from wasf import LOGS_PATH
-from wasf.api.abstract.cache import MemoryCache
-from wasf.api.abstract.controller import SoftwareManager, UpgradeRequirement, UpgradeRequirements, SoftwareAction
-from wasf.api.abstract.handler import ProcessWatcher
-from wasf.api.abstract.model import PackageStatus, SoftwarePackage, CustomSoftwareAction
-from wasf.api.abstract.view import MessageType, MultipleSelectComponent, InputOption, TextComponent, \
+from waffles import LOGS_PATH
+from waffles.api.abstract.cache import MemoryCache
+from waffles.api.abstract.controller import SoftwareManager, UpgradeRequirement, UpgradeRequirements, SoftwareAction
+from waffles.api.abstract.handler import ProcessWatcher
+from waffles.api.abstract.model import PackageStatus, SoftwarePackage, CustomSoftwareAction
+from waffles.api.abstract.view import MessageType, MultipleSelectComponent, InputOption, TextComponent, \
     FormComponent, ViewComponent
-from wasf.api.exception import NoInternetException
-from wasf.commons import user
-from wasf.commons.html import bold
-from wasf.commons.internet import InternetChecker
-from wasf.commons.system import get_human_size_str, ProcessHandler, SimpleProcess
-from wasf.view.core import timeshift
-from wasf.view.core.config import CoreConfigManager
-from wasf.view.qt import commons
-from wasf.view.qt.view_model import PackageView, PackageViewStatus
-from wasf.view.util.translation import I18n
+from waffles.api.exception import NoInternetException
+from waffles.commons import user
+from waffles.commons.html import bold
+from waffles.commons.internet import InternetChecker
+from waffles.commons.system import get_human_size_str, ProcessHandler, SimpleProcess
+from waffles.view.core import timeshift
+from waffles.view.core.config import CoreConfigManager
+from waffles.view.qt import commons
+from waffles.view.qt.view_model import PackageView, PackageViewStatus
+from waffles.view.util.translation import I18n
 
 RE_VERSION_IN_NAME = re.compile(r'\s+version\s+[\w.]+\s*$')
 

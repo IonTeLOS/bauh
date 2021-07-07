@@ -1,12 +1,12 @@
 import logging
 import sys
 
-from wasf.api.abstract.cache import MemoryCacheFactory
-from wasf.api.abstract.disk import DiskCacheLoaderFactory
-from wasf.api.abstract.download import FileDownloader
-from wasf.api.http import HttpClient
-from wasf.commons.internet import InternetChecker
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.cache import MemoryCacheFactory
+from waffles.api.abstract.disk import DiskCacheLoaderFactory
+from waffles.api.abstract.download import FileDownloader
+from waffles.api.http import HttpClient
+from waffles.commons.internet import InternetChecker
+from waffles.view.util.translation import I18n
 
 
 class ApplicationContext:

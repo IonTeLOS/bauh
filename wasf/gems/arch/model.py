@@ -1,9 +1,9 @@
 from typing import List, Set, Optional
 
-from wasf.api.abstract.model import SoftwarePackage, CustomSoftwareAction
-from wasf.commons import resource
-from wasf.gems.arch import ROOT_DIR, ARCH_CACHE_PATH
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.model import SoftwarePackage, CustomSoftwareAction
+from waffles.commons import resource
+from waffles.gems.arch import ROOT_DIR, ARCH_CACHE_PATH
+from waffles.view.util.translation import I18n
 
 CACHED_ATTRS = {'command', 'icon_path', 'repository', 'maintainer', 'desktop_entry', 'categories', 'last_modified', 'commit'}
 

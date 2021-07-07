@@ -6,9 +6,9 @@ from typing import Set, List, Iterable, Dict, Optional
 
 import requests
 
-from wasf.api.http import HttpClient
-from wasf.gems.arch import AUR_INDEX_FILE, git
-from wasf.gems.arch.exceptions import PackageNotFoundException
+from waffles.api.http import HttpClient
+from waffles.gems.arch import AUR_INDEX_FILE, git
+from waffles.gems.arch.exceptions import PackageNotFoundException
 
 URL_INFO = 'https://aur.archlinux.org/rpc/?v=5&type=info&'
 URL_SRC_INFO = 'https://aur.archlinux.org/cgit/aur.git/plain/.SRCINFO?h='

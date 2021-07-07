@@ -12,15 +12,15 @@ from typing import Optional, List
 
 import requests
 
-from wasf.api.abstract.handler import TaskManager, ProcessWatcher
-from wasf.api.http import HttpClient
-from wasf.commons.boot import CreateConfigFile
-from wasf.commons.html import bold
-from wasf.gems.appimage import get_icon_path, INSTALLATION_PATH, SYMLINKS_DIR, util, DATABASES_TS_FILE, \
+from waffles.api.abstract.handler import TaskManager, ProcessWatcher
+from waffles.api.http import HttpClient
+from waffles.commons.boot import CreateConfigFile
+from waffles.commons.html import bold
+from waffles.gems.appimage import get_icon_path, INSTALLATION_PATH, SYMLINKS_DIR, util, DATABASES_TS_FILE, \
     APPIMAGE_CACHE_PATH, DATABASE_APPS_FILE, DATABASE_RELEASES_FILE, URL_COMPRESSED_DATABASES, SUGGESTIONS_FILE, \
     SUGGESTIONS_CACHED_TS_FILE, SUGGESTIONS_CACHED_FILE
-from wasf.gems.appimage.model import AppImage
-from wasf.view.util.translation import I18n
+from waffles.gems.appimage.model import AppImage
+from waffles.view.util.translation import I18n
 
 
 class DatabaseUpdater(Thread):

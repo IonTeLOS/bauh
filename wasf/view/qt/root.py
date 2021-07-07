@@ -7,12 +7,12 @@ from PyQt5.QtGui import QCursor
 from PyQt5.QtWidgets import QLineEdit, QApplication, QDialog, QPushButton, QVBoxLayout, \
     QSizePolicy, QToolBar, QLabel
 
-from wasf.api.abstract.context import ApplicationContext
-from wasf.commons.system import new_subprocess
-from wasf.view.core.config import CoreConfigManager
-from wasf.view.qt.components import QtComponentsManager, new_spacer
-from wasf.view.util import util
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.context import ApplicationContext
+from waffles.commons.system import new_subprocess
+from waffles.view.core.config import CoreConfigManager
+from waffles.view.qt.components import QtComponentsManager, new_spacer
+from waffles.view.util import util
+from waffles.view.util.translation import I18n
 
 ACTION_ASK_ROOT = 99
 

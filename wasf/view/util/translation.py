@@ -3,7 +3,7 @@ import locale
 import os
 from typing import Tuple, Set
 
-from wasf.view.util import resource
+from waffles.view.util import resource
 
 
 class I18n(dict):

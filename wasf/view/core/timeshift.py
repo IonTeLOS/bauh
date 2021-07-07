@@ -1,6 +1,6 @@
 import shutil
 
-from wasf.commons.system import SimpleProcess
+from waffles.commons.system import SimpleProcess
 
 
 def is_available() -> bool:

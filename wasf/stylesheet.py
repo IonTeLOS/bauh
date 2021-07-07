@@ -3,9 +3,9 @@ import os
 import re
 from typing import Optional, Dict, Tuple, Set
 
-from wasf.api.constants import USER_THEMES_PATH
-from wasf.view.util import resource
-from wasf.view.util.translation import I18n
+from waffles.api.constants import USER_THEMES_PATH
+from waffles.view.util import resource
+from waffles.view.util.translation import I18n
 
 # RE_WIDTH_PERCENT = re.compile(r'[\d\\.]+%w') TODO percentage measures disabled for the moment (requires more testing)
 # RE_HEIGHT_PERCENT = re.compile(r'[\d\\.]+%h') TODO percentage measures disabled for the moment (requires more testing)

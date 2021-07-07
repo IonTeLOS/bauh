@@ -8,12 +8,12 @@ from math import floor
 from threading import Thread
 from typing import Iterable, List
 
-from wasf.api.abstract.download import FileDownloader
-from wasf.api.abstract.handler import ProcessWatcher
-from wasf.api.http import HttpClient
-from wasf.commons.html import bold
-from wasf.commons.system import run_cmd, ProcessHandler, SimpleProcess, get_human_size_str
-from wasf.view.util.translation import I18n
+from waffles.api.abstract.download import FileDownloader
+from waffles.api.abstract.handler import ProcessWatcher
+from waffles.api.http import HttpClient
+from waffles.commons.html import bold
+from waffles.commons.system import run_cmd, ProcessHandler, SimpleProcess, get_human_size_str
+from waffles.view.util.translation import I18n
 
 RE_HAS_EXTENSION = re.compile(r'.+\.\w+$')
 

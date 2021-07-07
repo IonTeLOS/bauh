@@ -4,7 +4,7 @@ import subprocess
 from io import StringIO
 from typing import Tuple, Optional
 
-from wasf.commons.system import SimpleProcess
+from waffles.commons.system import SimpleProcess
 
 BASE_CMD = 'snap'
 

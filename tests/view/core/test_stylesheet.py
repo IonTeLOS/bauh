@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from wasf import stylesheet
+from waffles import stylesheet
 
 
 class StylesheetTest(TestCase):

@@ -1,7 +1,7 @@
 import json
 
-from wasf.cli import __app_name__
-from wasf.view.core.controller import GenericSoftwareManager
+from waffles.cli import __app_name__
+from waffles.view.core.controller import GenericSoftwareManager
 
 
 class CLIManager:

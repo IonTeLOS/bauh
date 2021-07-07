@@ -1,4 +1,4 @@
-from wasf.view.qt.view_model import PackageView
+from waffles.view.qt.view_model import PackageView
 
 
 def new_pkgs_info() -> dict:

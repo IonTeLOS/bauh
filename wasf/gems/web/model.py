@@ -3,9 +3,9 @@ import os
 from pathlib import Path
 from typing import List
 
-from wasf.api.abstract.model import SoftwarePackage
-from wasf.commons import resource, user
-from wasf.gems.web import ROOT_DIR
+from waffles.api.abstract.model import SoftwarePackage
+from waffles.commons import resource, user
+from waffles.gems.web import ROOT_DIR
 
 
 class WebApplication(SoftwarePackage):
@@ -116,7 +116,7 @@ class WebApplication(SoftwarePackage):
         return False
 
     def get_publisher(self) -> str:
-        return 'wasf'
+        return 'waffles'
 
     def has_screenshots(self) -> bool:
         return False

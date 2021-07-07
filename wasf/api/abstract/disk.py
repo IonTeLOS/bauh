@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import Type
 
-from wasf.api.abstract.cache import MemoryCache
-from wasf.api.abstract.model import SoftwarePackage
+from waffles.api.abstract.cache import MemoryCache
+from waffles.api.abstract.model import SoftwarePackage
 
 
 class DiskCacheLoader:

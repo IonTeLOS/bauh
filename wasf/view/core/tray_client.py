@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from wasf.api.constants import CACHE_PATH
+from waffles.api.constants import CACHE_PATH
 
 TRAY_CHECK_FILE = '{}/notify_tray'.format(CACHE_PATH)  # it is a file that signals to the tray icon it should recheck for updates
 

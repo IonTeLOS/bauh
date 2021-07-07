@@ -6,7 +6,7 @@ from datetime import datetime
 from logging import Logger
 from pathlib import Path
 
-from wasf.api.constants import CACHE_PATH
+from waffles.api.constants import CACHE_PATH
 
 SYNC_FILE = '{}/arch/mirrors_sync'.format(CACHE_PATH)
 

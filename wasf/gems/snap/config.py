@@ -1,5 +1,5 @@
-from wasf.commons.config import YAMLConfigManager
-from wasf.gems.snap import CONFIG_FILE
+from waffles.commons.config import YAMLConfigManager
+from waffles.gems.snap import CONFIG_FILE
 
 
 class SnapConfigManager(YAMLConfigManager):

@@ -4,26 +4,26 @@ import traceback
 from threading import Thread
 from typing import List, Set, Type, Optional, Tuple
 
-from wasf.api.abstract.controller import SoftwareManager, SearchResult, ApplicationContext, UpgradeRequirements, \
+from waffles.api.abstract.controller import SoftwareManager, SearchResult, ApplicationContext, UpgradeRequirements, \
     TransactionResult, SoftwareAction
-from wasf.api.abstract.disk import DiskCacheLoader
-from wasf.api.abstract.handler import ProcessWatcher, TaskManager
-from wasf.api.abstract.model import SoftwarePackage, PackageHistory, PackageUpdate, PackageSuggestion, \
+from waffles.api.abstract.disk import DiskCacheLoader
+from waffles.api.abstract.handler import ProcessWatcher, TaskManager
+from waffles.api.abstract.model import SoftwarePackage, PackageHistory, PackageUpdate, PackageSuggestion, \
     SuggestionPriority, CustomSoftwareAction, PackageStatus
-from wasf.api.abstract.view import SingleSelectComponent, SelectViewType, InputOption, ViewComponent, PanelComponent, \
+from waffles.api.abstract.view import SingleSelectComponent, SelectViewType, InputOption, ViewComponent, PanelComponent, \
     FormComponent, TextInputComponent
-from wasf.api.exception import NoInternetException
-from wasf.commons import resource
-from wasf.commons.boot import CreateConfigFile
-from wasf.commons.category import CategoriesDownloader
-from wasf.commons.html import bold
-from wasf.commons.system import SystemProcess, ProcessHandler, new_root_subprocess, get_human_size_str
-from wasf.commons.view_utils import new_select
-from wasf.gems.snap import snap, URL_CATEGORIES_FILE, CATEGORIES_FILE_PATH, SUGGESTIONS_FILE, \
+from waffles.api.exception import NoInternetException
+from waffles.commons import resource
+from waffles.commons.boot import CreateConfigFile
+from waffles.commons.category import CategoriesDownloader
+from waffles.commons.html import bold
+from waffles.commons.system import SystemProcess, ProcessHandler, new_root_subprocess, get_human_size_str
+from waffles.commons.view_utils import new_select
+from waffles.gems.snap import snap, URL_CATEGORIES_FILE, CATEGORIES_FILE_PATH, SUGGESTIONS_FILE, \
     get_icon_path, snapd, ROOT_DIR
-from wasf.gems.snap.config import SnapConfigManager
-from wasf.gems.snap.model import SnapApplication
-from wasf.gems.snap.snapd import SnapdClient
+from waffles.gems.snap.config import SnapConfigManager
+from waffles.gems.snap.model import SnapApplication
+from waffles.gems.snap.snapd import SnapdClient
 
 RE_AVAILABLE_CHANNELS = re.compile(re.compile(r'(\w+)\s+(snap install.+)'))
 

@@ -9,15 +9,15 @@ from PyQt5.QtGui import QIcon, QCursor, QCloseEvent
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QSizePolicy, QTableWidget, QHeaderView, QPushButton, \
     QProgressBar, QPlainTextEdit, QToolButton, QHBoxLayout
 
-from wasf import __app_name__
-from wasf.api.abstract.context import ApplicationContext
-from wasf.api.abstract.controller import SoftwareManager, SoftwareAction
-from wasf.api.abstract.handler import TaskManager
-from wasf.view.qt.components import new_spacer, QCustomToolbar
-from wasf.view.qt.qt_utils import centralize
-from wasf.view.qt.root import RootDialog
-from wasf.view.qt.thread import AnimateProgress
-from wasf.view.util.translation import I18n
+from waffles import __app_name__
+from waffles.api.abstract.context import ApplicationContext
+from waffles.api.abstract.controller import SoftwareManager, SoftwareAction
+from waffles.api.abstract.handler import TaskManager
+from waffles.view.qt.components import new_spacer, QCustomToolbar
+from waffles.view.qt.qt_utils import centralize
+from waffles.view.qt.root import RootDialog
+from waffles.view.qt.thread import AnimateProgress
+from waffles.view.util.translation import I18n
 
 
 class Prepare(QThread, TaskManager):
