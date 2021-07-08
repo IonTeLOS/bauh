@@ -12,7 +12,7 @@ class AURModuleTest(TestCase):
         expected_fields = {
             'pkgbase': 'waffles',
             'pkgname': 'waffles',
-            'pkgver': '0.1',
+            'pkgver': '1.0',
             'pkgrel': '2',
             'url': 'https://github.com/iontelos/waffles',
             'arch': 'any',
@@ -27,7 +27,7 @@ class AURModuleTest(TestCase):
                 'python-lxml: for Native Web applications support',
                 'snapd: required for Snap support'
             ],
-            'source': ['https://github.com/iontelos/waffles/archive/0.1.tar.gz'],
+            'source': ['https://github.com/iontelos/waffles/archive/1.0.tar.gz'],
             'sha512sums': ['cb1820b8a41dccec746d91d71b7f524c2e3caf6b30b0cd9666598b8ad49302654d9ce9bd1a0a2a9612afebc27ef78a2a94ac10e4e6c183742effe4feeabaa7b2']
         }
 
@@ -47,7 +47,7 @@ class AURModuleTest(TestCase):
 
     def test_map_srcinfo__one_name__only_specific_fields(self):
         expected_fields = {
-            'pkgver': '0.9.6',
+            'pkgver': '1.0',
             'pkgrel': '2'
         }
 
