@@ -31,7 +31,7 @@ def get_default_icon(system: bool = True) -> Tuple[str, QIcon]:
         if not system_icon.isNull():
             return system_icon.name(), system_icon
 
-    path = resource.get_path('img/waffles.png')
+    path = resource.get_path('img/logo.svg')
     return path, QIcon(path)
 
 
