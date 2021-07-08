@@ -18,7 +18,7 @@ APPIMAGE_CACHE_PATH = '{}/appimage'.format(CACHE_PATH)
 DATABASE_APPS_FILE = '{}/apps.db'.format(APPIMAGE_CACHE_PATH)
 DATABASE_RELEASES_FILE = '{}/releases.db'.format(APPIMAGE_CACHE_PATH)
 DATABASES_TS_FILE = '{}/dbs.ts'.format(APPIMAGE_CACHE_PATH)
-DESKTOP_ENTRIES_PATH = '{}/usr/share/applications'.format(str(Path.home()))
+DESKTOP_ENTRIES_PATH = '{}/.local/share/applications'.format(str(Path.home()))
 SUGGESTIONS_CACHED_FILE = '{}/suggestions.txt'.format(APPIMAGE_CACHE_PATH)
 SUGGESTIONS_CACHED_TS_FILE = '{}/suggestions.ts'.format(APPIMAGE_CACHE_PATH)
 
