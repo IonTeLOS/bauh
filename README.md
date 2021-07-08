@@ -32,7 +32,8 @@ To "uninstall" the virtual environment :
 waffles_env/bin/waffles --reset  # removes cache and configurations files from HOME
 rm -rf waffles_env` (just remove the directory)
 
-<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+The waffles.png Icon is made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com)
+
 Enjoy!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
