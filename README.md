@@ -24,7 +24,7 @@ Then type following commands:
 
 ```
 python3 -m venv waffles_env # creates an isolated environment inside the directory called "waffles_env"
-waffles_env/bin/pip install https://github.com/IonTeLOS/waffles/archive/refs/tags/1.2.tar.gz  # installs bauh in the isolated environment
+waffles_env/bin/pip install https://github.com/IonTeLOS/waffles/archive/refs/tags/1.2.tar.gz  # installs Waffles in the isolated environment
 waffles_env/bin/waffles              # launches Waffles. For the tray-mode: waffles_env/bin/waffles-tray
 
 To "uninstall" the virtual environment :
@@ -32,6 +32,7 @@ To "uninstall" the virtual environment :
 waffles_env/bin/waffles --reset  # removes cache and configurations files from HOME
 rm -rf waffles_env` (just remove the directory)
 
+<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 Enjoy!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
