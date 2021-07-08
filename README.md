@@ -16,6 +16,7 @@ Installing snapd is also suggested (you may have to reboot your system after sna
 
 waffles is being currently tested for possible default inclusion in [**TeLOS Linux**](https://teloslinux.org)
 
+The waffles.png Icon is made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com)
 More info on Waffles will be added as this project evolves.
 
 You can try Waffles before installation in a virtual env environment
@@ -31,8 +32,6 @@ To "uninstall" the virtual environment :
 
 waffles_env/bin/waffles --reset  # removes cache and configurations files from HOME
 rm -rf waffles_env` (just remove the directory)
-
-The waffles.png Icon is made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com)
 
 Enjoy!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
