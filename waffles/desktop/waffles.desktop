@@ -4,4 +4,4 @@ Name=Waffles App Control
 Categories=System;
 Comment=Install and remove Web - AppImage - Flatpak and Snap applications
 Exec=/usr/local/bin/waffles
-Icon=/usr/share/icons/waffles.png
+Icon=waffles

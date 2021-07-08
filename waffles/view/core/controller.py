@@ -59,7 +59,7 @@ class GenericSoftwareManager(SoftwareManager):
                                                    i18n_status_key='action.reset.status',
                                                    manager_method='reset',
                                                    manager=self,
-                                                   icon_path=resource.get_path('img/logo.svg'),
+                                                   icon_path=resource.get_path('img/waffles.png'),
                                                    requires_root=False,
                                                    refresh=False)]
         self.dynamic_extra_actions = {CustomSoftwareAction(i18n_label_key='action.backups',
@@ -408,7 +408,7 @@ class GenericSoftwareManager(SoftwareManager):
         taskman = task_manager if task_manager else TaskManager()  # empty task manager to prevent null pointers
 
         create_config = CreateConfigFile(taskman=taskman, configman=self.configman, i18n=self.i18n,
-                                         task_icon_path=get_path('img/logo.svg'), logger=self.logger)
+                                         task_icon_path=get_path('img/waffles.png'), logger=self.logger)
         create_config.start()
 
         if self.managers:

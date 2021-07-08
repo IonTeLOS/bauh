@@ -134,7 +134,7 @@ class TrayIcon(QSystemTrayIcon):
             self.icon_default = QIcon.fromTheme('waffles_tray_default')
 
         if self.icon_default.isNull():
-            self.icon_default = load_resource_icon('img/logo.svg', 24)
+            self.icon_default = load_resource_icon('img/waffles_tray.png', 24)
 
         if config['ui']['tray']['updates_icon']:
             self.icon_updates = QIcon(config['ui']['tray']['updates_icon'])
@@ -142,7 +142,7 @@ class TrayIcon(QSystemTrayIcon):
             self.icon_updates = QIcon.fromTheme('waffles_tray_updates')
 
         if self.icon_updates.isNull():
-            self.icon_updates = load_resource_icon('img/logo_update.svg', 24)
+            self.icon_updates = load_resource_icon('img/waffles_tray.png', 24)
 
         self.setIcon(self.icon_default)
 

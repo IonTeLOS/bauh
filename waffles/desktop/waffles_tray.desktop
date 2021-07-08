@@ -4,4 +4,4 @@ Name=Waffles@tray
 Categories=Utility;
 Comment=Install and remove Web - AppImage - Flatpak and Snap applications
 Exec=/usr/local/bin/waffles-tray
-Icon=/usr/share/icons/waffles_tray.png
+Icon=waffles_tray
