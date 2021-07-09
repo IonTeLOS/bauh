@@ -579,34 +579,6 @@ class GenericSoftwareManager(SoftwareManager):
 
         return True
 
-    def get_custom_actions(self) -> List[CustomSoftwareAction]:
-        actions = []
-        if self.managers:
-            working_managers = []
-
-            for man in self.managers:
-                if self._can_work(man):
-                    working_managers.append(man)
-
-            if working_managers:
-                working_managers.sort(key=lambda m: m.__class__.__name__)
-
-                for man in working_managers:
-                    man_actions = man.get_custom_actions()
-
-                    if man_actions:
-                        actions.extend(man_actions)
-
-        app_config = self.configman.get_config()
-
-        for action, available in self.dynamic_extra_actions.items():
-            if available(app_config):
-                actions.append(action)
-
-        actions.extend(self.extra_actions)
-
-        return actions
-
     def _fill_sizes(self, man: SoftwareManager, pkgs: List[SoftwarePackage]):
         ti = time.time()
         man.fill_sizes(pkgs)
