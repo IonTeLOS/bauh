@@ -16,11 +16,11 @@ class CoreConfigManager(YAMLConfigManager):
             'gems': None,
             'memory_cache': {
                 'data_expiration': 60 * 60,
-                'icon_expiration': 60 * 5
+                'icon_expiration': 60 * 10
             },
             'locale': None,
             'updates': {
-                'check_interval': 0,
+                'check_interval': 3600,
                 'ask_for_reboot': False
             },
             'system': {
@@ -59,6 +59,6 @@ class CoreConfigManager(YAMLConfigManager):
                 }
             },
             'boot': {
-                'load_apps': False
+                'load_apps': True
             }
         }
