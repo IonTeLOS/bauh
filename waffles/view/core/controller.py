@@ -19,6 +19,7 @@ from waffles.commons.boot import CreateConfigFile
 from waffles.commons.html import bold
 from waffles.view.core.config import CoreConfigManager
 from waffles.view.core.settings import GenericSettingsManager
+from waffles.view.core.update import check_for_update
 from waffles.view.util import resource
 from waffles.view.util.resource import get_path
 from waffles.view.util.util import clean_app_files, restart_app
@@ -411,6 +412,30 @@ class GenericSoftwareManager(SoftwareManager):
                         updates.extend(man_updates)
 
         return updates
+    
+    def list_warnings(self, internet_available: bool = None) -> List[str]:
+        warnings = []
+
+        int_available = self.context.is_internet_available()
+
+        if int_available:
+            updates_msg = check_for_update(self.logger, self.http_client, self.i18n)
+
+            if updates_msg:
+                warnings.append(updates_msg)
+
+        if self.managers:
+            for man in self.managers:
+                if man.is_enabled():
+                    man_warnings = man.list_warnings(internet_available=int_available)
+
+                    if man_warnings:
+                        if warnings is None:
+                            warnings = []
+
+                        warnings.extend(man_warnings)
+
+        return warnings
 
     def _fill_suggestions(self, suggestions: list, man: SoftwareManager, limit: int, filter_installed: bool):
         if self._can_work(man):
