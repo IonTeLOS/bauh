@@ -521,19 +521,6 @@ class DowngradePackage(AsyncAction):
     def run(self):
         if self.pkg:
             success = False
-
-            proceed, _ = self.request_backup(action_key='downgrade',
-                                             pkg=self.pkg,
-                                             i18n=self.i18n,
-                                             root_password=self.root_pwd,
-                                             app_config=CoreConfigManager().get_config())
-
-            if not proceed:
-                self.notify_finished({'app': self.pkg, 'success': success})
-                self.pkg = None
-                self.root_pwd = None
-                return
-
             try:
                 success = self.manager.downgrade(self.pkg.model, self.root_pwd, self)
             except (requests.exceptions.ConnectionError, NoInternetException) as e:
@@ -908,20 +895,6 @@ class CustomAction(AsyncAction):
 
     def run(self):
         res = {'success': False, 'pkg': self.pkg, 'action': self.custom_action, 'error': None, 'error_type': MessageType.ERROR}
-
-        if self.custom_action.backup:
-            proceed, _ = self.request_backup(app_config=CoreConfigManager.get_config(),
-                                             action_key=None,
-                                             i18n=self.i18n,
-                                             root_password=self.root_pwd,
-                                             pkg=self.pkg)
-            if not proceed:
-                self.notify_finished(res)
-                self.pkg = None
-                self.custom_action = None
-                self.root_pwd = None
-                return
-
         try:
             res['success'] = self.manager.execute_custom_action(action=self.custom_action,
                                                                 pkg=self.pkg.model if self.pkg else None,
