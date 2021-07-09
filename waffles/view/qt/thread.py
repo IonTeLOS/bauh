@@ -425,21 +425,6 @@ class UpgradeSelected(AsyncAction):
                 self.pkgs = None
                 return
 
-        # performing backup
-        if should_backup:
-            proceed, root_password = self.request_backup(action_key='upgrade',
-                                                         app_config=app_config,
-                                                         i18n=self.i18n,
-                                                         root_password=root_password,
-                                                         pkg=None,
-                                                         backup_only=True)
-            if not proceed:
-                self.notify_finished({'success': False, 'updated': 0, 'types': set(), 'id': None})
-                self.pkgs = None
-                return
-
-        self.change_substatus('')
-
         timestamp = datetime.now()
         upgrade_id = 'upgrade_{}{}{}_{}'.format(timestamp.year, timestamp.month, timestamp.day, int(time.time()))
 
