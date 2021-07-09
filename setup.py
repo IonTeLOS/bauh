@@ -4,7 +4,7 @@ import os
 from setuptools import setup, find_packages
 
 DESCRIPTION = (
-    "Graphical interface to manage Linux Web - AppImage - Snap - Flatpak applications"
+    "Graphical interface to manage Linux Web - AppImage - Snap and Flatpak applications"
 )
 
 AUTHOR = "Ion@TeLOS Linux for Debian, based on the work of bauh developers"
