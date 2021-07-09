@@ -333,7 +333,6 @@ class GenericSettingsManager:
 
     def _save_settings(self, general: PanelComponent,
                        advanced: PanelComponent,
-                       backup: PanelComponent,
                        ui: PanelComponent,
                        tray: PanelComponent,
                        gems_panel: PanelComponent) -> Tuple[bool, Optional[List[str]]]:
@@ -380,18 +379,6 @@ class GenericSettingsManager:
         core_config['memory_cache']['icon_expiration'] = icon_exp
 
         core_config['disk']['trim']['after_upgrade'] = adv_form.get_component('trim_after_upgrade').get_selected()
-
-        # backup
-        if backup:
-            bkp_form = backup.components[0]
-
-            core_config['backup']['enabled'] = bkp_form.get_component('enabled').get_selected()
-            core_config['backup']['mode'] = bkp_form.get_component('mode').get_selected()
-            core_config['backup']['type'] = bkp_form.get_component('type').get_selected()
-            core_config['backup']['install'] = bkp_form.get_component('install').get_selected()
-            core_config['backup']['uninstall'] = bkp_form.get_component('uninstall').get_selected()
-            core_config['backup']['upgrade'] = bkp_form.get_component('upgrade').get_selected()
-            core_config['backup']['downgrade'] = bkp_form.get_component('downgrade').get_selected()
 
         # tray
         tray_form = tray.components[0]
