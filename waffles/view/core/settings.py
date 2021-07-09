@@ -15,7 +15,6 @@ from waffles.api.abstract.view import ViewComponent, TabComponent, InputOption, 
     PanelComponent, FormComponent, TabGroupComponent, SingleSelectComponent, SelectViewType, TextInputComponent, \
     FileChooserComponent, RangeInputComponent
 from waffles.commons.view_utils import new_select
-from waffles.view.core import timeshift
 from waffles.view.core.config import CoreConfigManager
 from waffles.view.core.downloader import AdaptableFileDownloader
 from waffles.view.util import translation
@@ -516,66 +515,4 @@ class GenericSettingsManager:
         tf = time.time()
         self.logger.info("Saving all settings took {0:.8f} seconds".format(tf - ti))
         return success, warnings
-
-    def _gen_backup_settings(self, core_config: dict, screen_width: int, screen_height: int) -> TabComponent:
-        if timeshift.is_available():
-            default_width = floor(0.22 * screen_width)
-
-            enabled_opt = self._gen_bool_component(label=self.i18n['core.config.backup'],
-                                                   tooltip=None,
-                                                   value=bool(core_config['backup']['enabled']),
-                                                   id_='enabled',
-                                                   max_width=default_width)
-
-            ops_opts = [(self.i18n['yes'].capitalize(), True, None),
-                        (self.i18n['no'].capitalize(), False, None),
-                        (self.i18n['ask'].capitalize(), None, None)]
-
-            install_mode = new_select(label=self.i18n['core.config.backup.install'],
-                                      tip=None,
-                                      value=core_config['backup']['install'],
-                                      opts=ops_opts,
-                                      max_width=default_width,
-                                      id_='install')
-
-            uninstall_mode = new_select(label=self.i18n['core.config.backup.uninstall'],
-                                        tip=None,
-                                        value=core_config['backup']['uninstall'],
-                                        opts=ops_opts,
-                                        max_width=default_width,
-                                        id_='uninstall')
-
-            upgrade_mode = new_select(label=self.i18n['core.config.backup.upgrade'],
-                                      tip=None,
-                                      value=core_config['backup']['upgrade'],
-                                      opts=ops_opts,
-                                      max_width=default_width,
-                                      id_='upgrade')
-
-            downgrade_mode = new_select(label=self.i18n['core.config.backup.downgrade'],
-                                        tip=None,
-                                        value=core_config['backup']['downgrade'],
-                                        opts=ops_opts,
-                                        max_width=default_width,
-                                        id_='downgrade')
-
-            mode = new_select(label=self.i18n['core.config.backup.mode'],
-                              tip=None,
-                              value=core_config['backup']['mode'],
-                              opts=[
-                                  (self.i18n['core.config.backup.mode.incremental'], 'incremental',
-                                   self.i18n['core.config.backup.mode.incremental.tip']),
-                                  (self.i18n['core.config.backup.mode.only_one'], 'only_one',
-                                   self.i18n['core.config.backup.mode.only_one.tip'])
-                              ],
-                              max_width=default_width,
-                              id_='mode')
-            type_ = new_select(label=self.i18n['type'].capitalize(),
-                               tip=None,
-                               value=core_config['backup']['type'],
-                               opts=[('rsync', 'rsync', None), ('btrfs', 'btrfs', None)],
-                               max_width=default_width,
-                               id_='type')
-
-            sub_comps = [FormComponent([enabled_opt, mode, type_, install_mode, uninstall_mode, upgrade_mode, downgrade_mode], spaces=False)]
-            return TabComponent(self.i18n['core.config.tab.backup'].capitalize(), PanelComponent(sub_comps), None, 'core.bkp')
+   
