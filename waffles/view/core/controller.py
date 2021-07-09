@@ -62,42 +62,7 @@ class GenericSoftwareManager(SoftwareManager):
                                                    icon_path=resource.get_path('img/logo.svg'),
                                                    requires_root=False,
                                                    refresh=False)]
-        self.dynamic_extra_actions = {CustomSoftwareAction(i18n_label_key='action.backups',
-                                                           i18n_status_key='action.backups.status',
-                                                           manager_method='launch_timeshift',
-                                                           manager=self,
-                                                           icon_path='timeshift',
-                                                           requires_root=False,
-                                                           refresh=False): self.is_backups_action_available}
-
-    def _is_timeshift_launcher_available(self) -> bool:
-        return bool(shutil.which('timeshift-launcher'))
-
-    def is_backups_action_available(self, app_config: dict) -> bool:
-        return bool(app_config['backup']['enabled']) and self._is_timeshift_launcher_available()
-
-    def reset_cache(self):
-        if self._available_cache is not None:
-            self._available_cache = {}
-            self.working_managers.clear()
-
-    def launch_timeshift(self, root_password: str, watcher: ProcessWatcher):
-        if self._is_timeshift_launcher_available():
-            try:
-                Popen(['timeshift-launcher'], stderr=STDOUT)
-                return True
-            except:
-                traceback.print_exc()
-                watcher.show_message(title=self.i18n["error"].capitalize(),
-                                     body=self.i18n['action.backups.tool_error'].format(bold('Timeshift')),
-                                     type_=MessageType.ERROR)
-                return False
-        else:
-            watcher.show_message(title=self.i18n["error"].capitalize(),
-                                 body=self.i18n['action.backups.tool_error'].format(bold('Timeshift')),
-                                 type_=MessageType.ERROR)
-            return False
-
+        
     def _sort(self, apps: List[SoftwarePackage], word: str) -> List[SoftwarePackage]:
 
         exact_name_matches, contains_name_matches, others = [], [], []
