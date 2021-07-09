@@ -19,7 +19,6 @@ from waffles.commons.boot import CreateConfigFile
 from waffles.commons.html import bold
 from waffles.view.core.config import CoreConfigManager
 from waffles.view.core.settings import GenericSettingsManager
-from waffles.view.core.update import check_for_update
 from waffles.view.util import resource
 from waffles.view.util.resource import get_path
 from waffles.view.util.util import clean_app_files, restart_app
