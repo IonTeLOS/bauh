@@ -1,17 +1,21 @@
-**Waffles**, which is a fork of [bauh](https://github.com/vinifmor/bauh), is a graphical interface for managing your Linux software (packages/applications). It currently supports the following formats: AppImage, ArchLinux repositories/AUR (when run in ArchLinux), Flatpak, Snap and Web applications.
+**Waffles**, which is a fork of [bauh](https://github.com/vinifmor/bauh), is a graphical interface for managing your Linux software (packages/applications). Waffles supports the following formats: AppImage, Flatpak, Snap and Web applications.
 
 Key features
 - A management panel where you can: search, install, uninstall, upgrade, downgrade and launch you applications (and more...)
 - Tray mode: it launches attached to the system tray and publishes notifications when there are software updates available
 
-An experimental [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.1/waffles_1.1-1_amd64.deb) of Waffles compatible with Debian Bullseye has been released. If you want to try it **now** download it and run from the same directory you downloaded the .deb file to sudo apt install ./waffles_1.1-1_amd64.deb 
+An experimental [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.1/waffles_1.1-1_amd64.deb) of Waffles compatible with Debian Bullseye has been released. If you want to try it **now**, download it and run from the same directory you downloaded the .deb file to : sudo apt install ./waffles_1.1-1_amd64.deb 
 
 This will take care of all necessary dependencies automatically.
 
 An experimental [AppImage](https://github.com/IonTeLOS/waffles/releases/download/1.2/Waffles-1.1-x86_64.AppImage) of Waffles has been released. 
-Download it, open terminal in same directory and run sudo chmod +x Waffles-1.1-x86_64.AppImage 
-You can then click the AppImage file to run the app
-Before you attempt to do so make sure to preinstall the prerequisites sudo apt install python3, python3-pip, python-pip-whl, python3-wheel, python3-distutils, python3-lib2to3, python3-setuptools, python3-dateutil, python3-packaging, python3-pyparsing, python3-colorama, python3-yaml, libqt5designer5, libqt5help5, libqt5sql5, libqt5test5, libqt5xml5, python3-pyqt5, python3-pyqt5.sip, python3-bs4, python3-lxml, sqlite3, wget, fuse3, aria2, axel, python3-soupsieve, python3-requests, python3-xlib, flatpak
+
+Download it, open terminal in same directory and run : sudo chmod +x Waffles-1.1-x86_64.AppImage 
+
+You can then click the AppImage file to run the app.
+
+To be able to run the AppImage successfully make sure you preinstalled the prerequisites : sudo apt install python3, python3-pip, python-pip-whl, python3-wheel, python3-distutils, python3-lib2to3, python3-setuptools, python3-dateutil, python3-packaging, python3-pyparsing, python3-colorama, python3-yaml, libqt5designer5, libqt5help5, libqt5sql5, libqt5test5, libqt5xml5, python3-pyqt5, python3-pyqt5.sip, python3-bs4, python3-lxml, sqlite3, wget, fuse3, aria2, axel, python3-soupsieve, python3-requests, python3-xlib, flatpak
+
 Installing snapd is also suggested (you may have to reboot your system after snapd installation).
 
 waffles is being currently tested for possible default inclusion in [**TeLOS Linux**](https://teloslinux.org)
@@ -20,8 +24,10 @@ The waffles.png Icon is made by [Freepik](https://www.freepik.com) from [Flatico
 
 More info on Waffles will be added as this project evolves.
 
-You can try Waffles before installation in a virtual env environment
+You can try Waffles before installation in a virtual env environment : 
+
 Install prerequisites mentioned above plus python3-vent
+
 Then type following commands:
 
 ```
@@ -37,7 +43,8 @@ rm -rf waffles_env` (just remove the directory)
 Enjoy!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*Following info applies to bauh at the time the project was forked.*
+*Following info applies to bauh at the time the project was forked.* 
+**Waffles is a different app, not all of the following apply to Waffles, as it has been written for bauh**
 
 - Custom themes: it's possible to customize the tool's style/appearance. More at [Custom themes](#custom_themes)
 
