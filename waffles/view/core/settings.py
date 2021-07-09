@@ -457,7 +457,6 @@ class GenericSettingsManager:
             success, errors = self._save_settings(general=root_component.get_tab('core.gen').content,
                                                   advanced=root_component.get_tab('core.adv').content,
                                                   tray=root_component.get_tab('core.tray').content,
-                                                  backup=bkp.content if bkp else None,
                                                   ui=root_component.get_tab('core.ui').content,
                                                   gems_panel=root_component.get_tab('core.types').content)
             if errors:
