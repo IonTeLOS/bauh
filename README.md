@@ -1,8 +1,15 @@
-**Waffles**, which is a fork of [bauh](https://github.com/vinifmor/bauh), is a graphical interface for managing your Linux software (packages/applications). Waffles supports the following formats: AppImage, Flatpak, Snap and Web applications.
+**Waffles**, is a graphical interface for managing your Linux software (packages/applications). Waffles supports the following formats: AppImage, Flatpak, Snap and Web applications.
+
+Waffles is a simplified and Debian (and Debian-based distros) - oriented fork of [bauh](https://github.com/vinifmor/bauh). 
 
 Key features
-- A management panel where you can: search, install, uninstall, upgrade, downgrade and launch you applications (and more...)
+- A management panel where you can: search, install, uninstall, upgrade, downgrade and launch your AppImage, Flatpak, Snap and Web applications.  
 - Tray mode: it launches attached to the system tray and publishes notifications when there are software updates available
+
+DISCLAIMERS: 
+1. Waffles is **not** a .deb package/software manager or builder. There are already a lot of excellent conventional tools for those jobs, usually distro-specific but also some generic ones. 
+2. Waffles does not imply that you can or should substitute all or most .deb files with AppImage, Flatpak, Snap and Web applications. 
+3. Waffles comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
 
 An experimental [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.1/waffles_1.1-1_amd64.deb) of Waffles compatible with Debian Bullseye has been released. If you want to try it **now**, download it and run from the same directory you downloaded the .deb file to : sudo apt install ./waffles_1.1-1_amd64.deb 
 
@@ -41,6 +48,7 @@ waffles_env/bin/waffles --reset  # removes cache and configurations files from H
 rm -rf waffles_env` (just remove the directory)
 
 Enjoy!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *Following info applies to bauh at the time the project was forked.* 
