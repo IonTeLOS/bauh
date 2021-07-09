@@ -501,10 +501,10 @@ class UninstallPackage(AsyncAction):
                         self.manager.clean_cache_for(p)
 
                 self.notify_finished({'success': res.success, 'removed': res.removed, 'pkg': self.pkg})
-            except:
+        except:
                 traceback.print_exc()
                 self.notify_finished({'success': False, 'removed': None, 'pkg': self.pkg})
-            finally:
+        finally:
                 self.pkg = None
                 self.root_pwd = None
 
