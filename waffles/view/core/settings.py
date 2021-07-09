@@ -76,11 +76,6 @@ class GenericSettingsManager:
         tabs.append(self._gen_tray_settings(core_config, screen_width, screen_height))
         tabs.append(self._gen_adv_settings(core_config, screen_width, screen_height))
 
-        bkp_settings = self._gen_backup_settings(core_config, screen_width, screen_height)
-
-        if bkp_settings:
-            tabs.append(bkp_settings)
-
         for tab in gem_tabs:
             tabs.append(tab)
 
