@@ -20,8 +20,8 @@ class CoreConfigManager(YAMLConfigManager):
             },
             'locale': None,
             'updates': {
-                'check_interval': 30,
-                'ask_for_reboot': True
+                'check_interval': 0,
+                'ask_for_reboot': False
             },
             'system': {
                 'notifications': True,
@@ -29,11 +29,11 @@ class CoreConfigManager(YAMLConfigManager):
             },
             'suggestions': {
                 'enabled': True,
-                'by_type': 10
+                'by_type': 20
             },
             'ui': {
                 'table': {
-                    'max_displayed': 50
+                    'max_displayed': 80
                 },
                 'tray': {
                     'default_icon': None,
@@ -43,7 +43,7 @@ class CoreConfigManager(YAMLConfigManager):
                 'hdpi': True,
                 "auto_scale": False,
                 "scale_factor": 1.0,
-                'theme': 'light',
+                'theme': 'darcula',
                 'system_theme': False
 
             },
@@ -58,16 +58,7 @@ class CoreConfigManager(YAMLConfigManager):
                     'after_upgrade': False
                 }
             },
-            'backup': {
-                'enabled': True,
-                'install': None,
-                'uninstall': None,
-                'downgrade': None,
-                'upgrade': None,
-                'mode': 'incremental',
-                'type': 'rsync'
-            },
             'boot': {
-                'load_apps': True
+                'load_apps': False
             }
         }
