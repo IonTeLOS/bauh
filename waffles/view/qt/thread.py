@@ -24,7 +24,6 @@ from waffles.commons import user
 from waffles.commons.html import bold
 from waffles.commons.internet import InternetChecker
 from waffles.commons.system import get_human_size_str, ProcessHandler, SimpleProcess
-from waffles.view.core import timeshift
 from waffles.view.core.config import CoreConfigManager
 from waffles.view.qt import commons
 from waffles.view.qt.view_model import PackageView, PackageViewStatus
