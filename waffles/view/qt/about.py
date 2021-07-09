@@ -26,7 +26,7 @@ class AboutDialog(QDialog):
         logo_container.setLayout(QHBoxLayout())
 
         label_logo = QLabel()
-        label_logo.setObjectName('waffles')
+        label_logo.setObjectName('logo')
 
         logo_container.layout().addWidget(label_logo)
         layout.addWidget(logo_container)
