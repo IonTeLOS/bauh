@@ -8,17 +8,16 @@ assignees: ''
 ---
 **Before opening a new issue**
 Install the **staging** branch and check if the unexpected behavior is happening there as well.
-If you are on ArchLinux-based distro, you can install it through AUR (**bauh-staging**). Otherwise, you have
-to clone the repository and install it with pip:
+You have to clone the repository and install it with pip:
 ```
-git clone https://github.com/vinifmor/bauh.git -b staging --depth=1
-cd bauh
+git clone https://github.com/iontelos/waffles.git -b staging --depth=1
+cd waffles
 python3 -m venv venv
 venv/bin/pip install pip --upgrade
 venv/bin/pip install setuptools --upgrade
 venv/bin/pip install -r requirements.txt
 venv/bin/pip install .
-venv/bin/bauh  # or venv/bin/bauh-tray
+venv/bin/waffles  # or venv/bin/waffles-tray
 ```
  
 **Describe the bug**
