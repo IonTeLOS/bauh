@@ -24,7 +24,6 @@ from waffles.commons import user
 from waffles.commons.html import bold
 from waffles.commons.internet import InternetChecker
 from waffles.commons.system import get_human_size_str, ProcessHandler, SimpleProcess
-from waffles.view.core import timeshift
 from waffles.view.core.config import CoreConfigManager
 from waffles.view.qt import commons
 from waffles.view.qt.view_model import PackageView, PackageViewStatus
@@ -123,80 +122,6 @@ class AsyncAction(QThread, ProcessWatcher):
             return True
 
         return False
-
-    def _generate_backup(self, app_config: dict, i18n: I18n, root_password: Optional[str]) -> bool:
-        if app_config['backup']['mode'] not in ('only_one', 'incremental'):
-            self.show_message(title=self.i18n['error'].capitalize(),
-                              body='{}: {}'.format(self.i18n['action.backup.invalid_mode'],bold(app_config['backup']['mode'])),
-                              type_=MessageType.ERROR)
-            self.change_substatus('')
-            return False
-
-        handler = ProcessHandler(self)
-        if app_config['backup']['mode'] == 'only_one':
-            self.change_substatus('[{}] {}'.format(i18n['core.config.tab.backup'].lower(), i18n['action.backup.substatus.delete']))
-            deleted, _ = handler.handle_simple(timeshift.delete_all_snapshots(root_password))
-
-            if not deleted and not self.request_confirmation(title=i18n['core.config.tab.backup'],
-                                                             body='{}. {}'.format(i18n['action.backup.error.delete'],
-                                                                                  i18n['action.backup.error.proceed']),
-                                                             confirmation_label=i18n['yes'].capitalize(),
-                                                             deny_label=i18n['no'].capitalize()):
-                self.change_substatus('')
-                return False
-
-        self.change_substatus('[{}] {}'.format(i18n['core.config.tab.backup'].lower(), i18n['action.backup.substatus.create']))
-        created, _ = handler.handle_simple(timeshift.create_snapshot(root_password, app_config['backup']['type']))
-
-        if not created and not self.request_confirmation(title=i18n['core.config.tab.backup'],
-                                                         body='{}. {}'.format(i18n['action.backup.error.create'],
-                                                                              i18n['action.backup.error.proceed']),
-                                                         confirmation_label=i18n['yes'].capitalize(),
-                                                         deny_label=i18n['no'].capitalize()):
-            self.change_substatus('')
-            return False
-
-        self.change_substatus('')
-        return True
-
-    def _check_backup_requirements(self, app_config: dict, pkg: Optional[PackageView], action_key: Optional[str]) -> bool:
-        if pkg and not pkg.model.supports_backup():
-            return False
-
-        if action_key and app_config['backup'][action_key] is False:
-            return False
-
-        return bool(app_config['backup']['enabled']) and timeshift.is_available()
-
-    def _should_backup(self, action_key: str, app_config: dict, i18n: I18n) -> bool:
-        # backup -> true: do not ask, only execute | false: do not ask or execute | None: ask
-        backup = app_config['backup'][action_key] if action_key else None
-
-        if backup is None:
-            return self.request_confirmation(title=i18n['core.config.tab.backup'],
-                                             body=i18n['action.backup.msg'],
-                                             confirmation_label=i18n['yes'].capitalize(),
-                                             deny_label=i18n['no'].capitalize())
-        else:
-            return backup
-
-    def request_backup(self, action_key: Optional[str], pkg: Optional[PackageView], i18n: I18n, app_config: dict, root_password: Optional[str], backup_only: bool = False) -> Tuple[bool, Optional[str]]:
-        if not backup_only:
-            if not self._check_backup_requirements(app_config=app_config, pkg=pkg, action_key=action_key):
-                return True, root_password
-
-            if not self._should_backup(action_key=action_key, app_config=app_config, i18n=i18n):
-                return True, root_password
-
-        pwd = root_password
-        if not user.is_root() and pwd is None:
-            valid_password, pwd = self.request_root_password()
-
-            if not valid_password:
-                return False, None
-
-        return self._generate_backup(app_config=app_config, i18n=i18n, root_password=pwd), pwd
-
 
 class UpgradeSelected(AsyncAction):
 
