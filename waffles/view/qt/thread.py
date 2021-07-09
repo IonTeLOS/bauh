@@ -490,19 +490,7 @@ class UninstallPackage(AsyncAction):
         self.i18n = i18n
 
     def run(self):
-        if self.pkg:
-            proceed, _ = self.request_backup(action_key='uninstall',
-                                             pkg=self.pkg,
-                                             i18n=self.i18n,
-                                             root_password=self.root_pwd,
-                                             app_config=CoreConfigManager().get_config())
-            if not proceed:
-                self.notify_finished({'success': False, 'removed': None, 'pkg': self.pkg})
-                self.pkg = None
-                self.root_pwd = None
-                return
-
-            try:
+        try:
                 res = self.manager.uninstall(self.pkg.model, self.root_pwd, self, None)
 
                 if res.success and res.removed:
@@ -630,19 +618,6 @@ class InstallPackage(AsyncAction):
     def run(self):
         if self.pkg:
             res = {'success': False, 'installed': None, 'removed': None, 'pkg': self.pkg}
-
-            proceed, _ = self.request_backup(action_key='install',
-                                             pkg=self.pkg,
-                                             i18n=self.i18n,
-                                             root_password=self.root_pwd,
-                                             app_config=CoreConfigManager().get_config())
-
-            if not proceed:
-                self.signal_finished.emit(res)
-                self.pkg = None
-                self.root_pwd = None
-                return
-
             try:
                 transaction_res = self.manager.install(self.pkg.model, self.root_pwd, None, self)
                 res['success'] = transaction_res.success
