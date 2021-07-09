@@ -4,10 +4,10 @@ import os
 from setuptools import setup, find_packages
 
 DESCRIPTION = (
-    "Graphical interface to manage Linux Web - AppImage - Snap and Flatpak applications"
+    "Graphical interface to manage your Linux Web - AppImage - Flatpak and Snap applications"
 )
 
-AUTHOR = "Ion@TeLOS Linux for Debian, based on the work of bauh developers"
+AUTHOR = "Ion@TeLOS Linux for Debian, based on the credited work of bauh developers"
 AUTHOR_EMAIL = "teloslinux@protonmail.com"
 NAME = 'waffles'
 URL = "https://github.com/iontelos/" + NAME
