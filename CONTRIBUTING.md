@@ -1,9 +1,12 @@
 # How can I contribute?
 Well, you can...
+* Suggest new apps to be included in suggestions
+* Speak to other users or publicly about this project, post relevant content in social media
 * Report bugs
 * Add improvements
 * Fix bugs
 * Add new translations or fix the current ones
+* Build a Flatpak or Snap for Waffles
 
 # Reporting bugs
 The best means of reporting bugs is by following these basic guidelines:
