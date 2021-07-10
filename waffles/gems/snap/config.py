@@ -8,4 +8,4 @@ class SnapConfigManager(YAMLConfigManager):
         super(SnapConfigManager, self).__init__(config_file_path=CONFIG_FILE)
 
     def get_default_config(self) -> dict:
-        return {'install_channel': False, 'categories_exp': 24}
+        return {'install_channel': False, 'categories_exp': 72}

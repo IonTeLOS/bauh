@@ -10,9 +10,9 @@ class AppImageConfigManager(YAMLConfigManager):
     def get_default_config(self) -> dict:
         return {
             'database': {
-                'expiration': 60
+                'expiration': 3600
             },
             'suggestions': {
-                'expiration': 24
+                'expiration': 120
             }
         }

@@ -16,11 +16,11 @@ class CoreConfigManager(YAMLConfigManager):
             'gems': None,
             'memory_cache': {
                 'data_expiration': 60 * 60,
-                'icon_expiration': 60 * 5
+                'icon_expiration': 60 * 30
             },
             'locale': None,
             'updates': {
-                'check_interval': 30,
+                'check_interval': 300,
                 'ask_for_reboot': True
             },
             'system': {
@@ -29,11 +29,11 @@ class CoreConfigManager(YAMLConfigManager):
             },
             'suggestions': {
                 'enabled': True,
-                'by_type': 10
+                'by_type': 30
             },
             'ui': {
                 'table': {
-                    'max_displayed': 50
+                    'max_displayed': 120
                 },
                 'tray': {
                     'default_icon': None,
@@ -43,7 +43,7 @@ class CoreConfigManager(YAMLConfigManager):
                 'hdpi': True,
                 "auto_scale": False,
                 "scale_factor": 1.0,
-                'theme': 'light',
+                'theme': 'darcula',
                 'system_theme': False
 
             },
@@ -53,13 +53,8 @@ class CoreConfigManager(YAMLConfigManager):
                 'icons': True
             },
             'store_root_password': True,
-            'disk': {
-                'trim': {
-                    'after_upgrade': False
-                }
-            },
             'backup': {
-                'enabled': True,
+                'enabled': False,
                 'install': None,
                 'uninstall': None,
                 'downgrade': None,

@@ -1,12 +1,18 @@
 # How can I contribute?
 Well, you can...
+* Suggest new apps to be included in suggestions
+* Spread the word about this project, post relevant content in social media
 * Report bugs
 * Add improvements
 * Fix bugs
 * Add new translations or fix the current ones
+* Add a new theme
+* Build a Flatpak or Snap for Waffles
+* Create a relevant "recipe" for an AppImage builder
+* Last but not least, you can think of your own way to contribute!
 
 # Reporting bugs
-The best means of reporting bugs is by following these basic guidelines:
+The best way to report bugs is to follow these basic guidelines:
 
 * First describe in the title of the issue tracker what's gone wrong.
 * In the body, explain a basic synopsis of what exactly happens, explain how you got the bug one step at a time. If you're including script output, make sure you run the script with the verbose flag `-v`.
