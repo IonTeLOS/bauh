@@ -62,7 +62,12 @@ class GenericSoftwareManager(SoftwareManager):
                                                    icon_path=resource.get_path('img/logo.svg'),
                                                    requires_root=False,
                                                    refresh=False)]
-        
+
+    def reset_cache(self):
+        if self._available_cache is not None:
+            self._available_cache = {}
+            self.working_managers.clear()                                               
+
     def _sort(self, apps: List[SoftwarePackage], word: str) -> List[SoftwarePackage]:
 
         exact_name_matches, contains_name_matches, others = [], [], []
@@ -412,7 +417,7 @@ class GenericSoftwareManager(SoftwareManager):
                         updates.extend(man_updates)
 
         return updates
-    
+
     def list_warnings(self, internet_available: bool = None) -> List[str]:
         warnings = []
 
