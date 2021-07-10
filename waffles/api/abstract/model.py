@@ -9,8 +9,7 @@ class CustomSoftwareAction:
 
     def __init__(self, i18n_label_key: str, i18n_status_key: str, icon_path: str, manager_method: str,
                  requires_root: bool, manager: "SoftwareManager" = None,
-                 refresh: bool = True,
-                 i18n_confirm_key: str = None,
+                 i18n_confirm_key: str = None, refresh: bool = True,
                  requires_internet: bool = False):
         """
         :param i18n_label_key: the i18n key that will be used to display the action name
@@ -29,8 +28,8 @@ class CustomSoftwareAction:
         self.manager_method = manager_method
         self.requires_root = requires_root
         self.manager = manager
-        self.refresh = refresh
         self.i18n_confirm_key = i18n_confirm_key
+        self.refresh = refresh
         self.requires_internet = requires_internet
 
     def __hash__(self):
