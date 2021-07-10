@@ -53,11 +53,6 @@ class CoreConfigManager(YAMLConfigManager):
                 'icons': True
             },
             'store_root_password': True,
-            'disk': {
-                'trim': {
-                    'after_upgrade': False
-                }
-            },
             'boot': {
                 'load_apps': True
             }

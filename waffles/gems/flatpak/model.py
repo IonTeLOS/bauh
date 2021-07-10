@@ -105,9 +105,6 @@ class FlatpakApplication(SoftwarePackage):
 
         return self.name
 
-    def supports_backup(self) -> bool:
-        return True
-
     def supports_ignored_updates(self) -> bool:
         return self.installed
 

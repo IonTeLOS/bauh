@@ -9,7 +9,6 @@ class CustomSoftwareAction:
 
     def __init__(self, i18n_label_key: str, i18n_status_key: str, icon_path: str, manager_method: str,
                  requires_root: bool, manager: "SoftwareManager" = None,
-                 backup: bool = False, refresh: bool = True,
                  i18n_confirm_key: str = None,
                  requires_internet: bool = False):
         """
@@ -18,7 +17,6 @@ class CustomSoftwareAction:
         :param icon_path: the action icon path. Use None for no icon
         :param manager_method: the SoftwareManager method name that should be called. The method must has the following parameters: (pkg: SoftwarePackage, root_password: str, watcher: ProcessWatcher)
         :param manager: the instance that will execute the action ( optional )
-        :param backup: if a system backup should be performed before executing the action
         :param requires_root:
         :param refresh: if the a full app refresh should be done if the action succeeds
         :param i18n_confirm_key: action confirmation message
@@ -30,7 +28,6 @@ class CustomSoftwareAction:
         self.manager_method = manager_method
         self.requires_root = requires_root
         self.manager = manager
-        self.backup = backup
         self.refresh = refresh
         self.i18n_confirm_key = i18n_confirm_key
         self.requires_internet = requires_internet
@@ -230,9 +227,6 @@ class SoftwarePackage(ABC):
         return
 
     @abstractmethod
-    def supports_backup(self) -> bool:
-        pass
-
     def __str__(self):
         return '{} (id={}, name={})'.format(self.__class__.__name__, self.id, self.name)
 

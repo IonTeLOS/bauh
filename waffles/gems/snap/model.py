@@ -96,9 +96,6 @@ class SnapApplication(SoftwarePackage):
         if self.installed:
             return self.extra_actions
 
-    def supports_backup(self) -> bool:
-        return True
-
     def has_screenshots(self) -> bool:
         return not self.installed and self.screenshots
 

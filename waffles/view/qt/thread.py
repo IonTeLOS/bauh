@@ -239,20 +239,6 @@ class UpgradeSelected(AsyncAction):
 
         return True, None
 
-    def _ask_for_trim(self) -> bool:
-        return self.request_confirmation(title=self.i18n['confirmation'].capitalize(), body=self.i18n['action.trim_disk.ask'])
-
-    def _trim_disk(self, root_password: str):
-        self.change_status('{}...'.format(self.i18n['action.disk_trim'].capitalize()))
-        self.change_substatus('')
-
-        success, output = ProcessHandler(self).handle_simple(SimpleProcess(['fstrim', '/', '-v'], root_password=root_password))
-
-        if not success:
-            self.show_message(title=self.i18n['success'].capitalize(),
-                              body=self.i18n['action.disk_trim.error'],
-                              type_=MessageType.ERROR)
-
     def _write_summary_log(self, upgrade_id: str, requirements: UpgradeRequirements):
         try:
             Path(self.LOGS_DIR).mkdir(parents=True, exist_ok=True)
@@ -329,9 +315,6 @@ class UpgradeSelected(AsyncAction):
             if pkg.model.update and not pkg.model.is_update_ignored() and pkg.update_checked:
                 to_update.append(pkg)
 
-                if not bkp_supported and pkg.model.supports_backup():
-                    bkp_supported = True
-
                 if not root_user and not upgrade_requires_root and self.manager.requires_root(SoftwareAction.UPGRADE, pkg.model):
                     upgrade_requires_root = True
 
@@ -406,25 +389,6 @@ class UpgradeSelected(AsyncAction):
 
         app_config = CoreConfigManager().get_config()
 
-        # backup dialog ( if enabled, supported and accepted )
-        should_backup = bkp_supported
-        should_backup = should_backup and self._check_backup_requirements(app_config=app_config, pkg=None, action_key='upgrade')
-        should_backup = should_backup and self._should_backup(action_key='upgrade', app_config=app_config, i18n=self.i18n)
-
-        # trim dialog ( if enabled and accepted )
-        if app_config['disk']['trim']['after_upgrade'] is not False:
-            should_trim = app_config['disk']['trim']['after_upgrade'] or self._ask_for_trim()
-        else:
-            should_trim = False
-
-        if should_trim and not root_user and root_password is None:  # trim requires root and the password might have not being asked yet
-            valid_password, root_password = self._request_password()
-
-            if not valid_password:
-                self.notify_finished({'success': False, 'updated': 0, 'types': set(), 'id': None})
-                self.pkgs = None
-                return
-
         timestamp = datetime.now()
         upgrade_id = 'upgrade_{}{}{}_{}'.format(timestamp.year, timestamp.month, timestamp.day, int(time.time()))
 
@@ -436,9 +400,6 @@ class UpgradeSelected(AsyncAction):
         if success:
             updated = len(requirements.to_upgrade)
             updated_types.update((req.pkg.__class__ for req in requirements.to_upgrade))
-
-            if should_trim:
-                self._trim_disk(root_password)
 
             if bool(app_config['updates']['ask_for_reboot']):
                 msg = '<p>{}</p>{}</p><br/><p>{}</p>'.format(self.i18n['action.update.success.reboot.line1'],

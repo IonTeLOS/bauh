@@ -111,9 +111,6 @@ class AppImage(SoftwarePackage):
         if self.imported:
             return self.custom_actions
 
-    def supports_backup(self) -> bool:
-        return False
-
     def supports_ignored_updates(self) -> bool:
         return self.installed and not self.imported
 

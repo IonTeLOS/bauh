@@ -1,7 +1,20 @@
 [Desktop Entry]
-Type=Application
-Name=Waffles App Control
 Categories=System;
+Comment[en_US]=Install and remove Web - AppImage - Flatpak and Snap applications
 Comment=Install and remove Web - AppImage - Flatpak and Snap applications
 Exec=/usr/local/bin/waffles
+GenericName[en_US]=
+GenericName=
 Icon=/usr/share/icons/waffles.png
+MimeType=
+Name[en_US]=Waffles - AppControl
+Name=Waffles - AppControl
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
