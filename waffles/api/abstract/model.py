@@ -9,6 +9,7 @@ class CustomSoftwareAction:
 
     def __init__(self, i18n_label_key: str, i18n_status_key: str, icon_path: str, manager_method: str,
                  requires_root: bool, manager: "SoftwareManager" = None,
+                 refresh: bool = True,
                  i18n_confirm_key: str = None,
                  requires_internet: bool = False):
         """
