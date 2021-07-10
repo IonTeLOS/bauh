@@ -8,4 +8,4 @@ class FlatpakConfigManager(YAMLConfigManager):
         super(FlatpakConfigManager, self).__init__(config_file_path=CONFIG_FILE)
 
     def get_default_config(self) -> dict:
-        return {'installation_level': User}
+        return {'installation_level': None}
