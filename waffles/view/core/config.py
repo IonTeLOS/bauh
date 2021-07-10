@@ -16,7 +16,7 @@ class CoreConfigManager(YAMLConfigManager):
             'gems': None,
             'memory_cache': {
                 'data_expiration': 60 * 60,
-                'icon_expiration': 60 * 10
+                'icon_expiration': 60 * 30
             },
             'locale': None,
             'updates': {
@@ -29,11 +29,11 @@ class CoreConfigManager(YAMLConfigManager):
             },
             'suggestions': {
                 'enabled': True,
-                'by_type': 20
+                'by_type': 30
             },
             'ui': {
                 'table': {
-                    'max_displayed': 80
+                    'max_displayed': 120
                 },
                 'tray': {
                     'default_icon': None,

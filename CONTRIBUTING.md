@@ -1,14 +1,14 @@
 # How can I contribute?
 Well, you can...
-* Suggest new apps to be included in suggestions 
-* Speak to other users or publicly about this project, post relevant content in social media
+* Suggest new apps to be included in suggestions
+* Spread the word about this project, post relevant content in social media
 * Report bugs
 * Add improvements
 * Fix bugs
 * Add new translations or fix the current ones
 * Add a new theme
 * Build a Flatpak or Snap for Waffles
-* Create a "recipe" for an AppImage builder
+* Create a relevant "recipe" for an AppImage builder
 
 # Reporting bugs
 The best means of reporting bugs is by following these basic guidelines:
