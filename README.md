@@ -29,6 +29,10 @@ Waffles application is being tested for possible default inclusion in [**TeLOS L
 
 More info on Waffles will be added as this project evolves.
 
+Credits :
+- bauh application developers and the wonderful Community of Linux users
+- The waffles.png Icon is made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com).
+
 You can try Waffles before installation in a virtual env environment :
 
 Install the prerequisites mentioned above plus python3-venv package
@@ -48,8 +52,3 @@ rm -rf waffles_env` (just remove the directory)
 
 Enjoy!
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Credits :
-- bauh application developers and the wonderful Community of Linux users
-- The waffles.png Icon is made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com).
