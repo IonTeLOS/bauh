@@ -46,11 +46,9 @@ python3 -m venv waffles_env # creates an isolated environment inside the directo
 waffles_env/bin/pip install https://github.com/IonTeLOS/waffles/archive/refs/tags/1.0.tar.gz  # installs Waffles in the isolated environment (replace 0 with the actual release you are targeting)
 waffles_env/bin/waffles # launches Waffles.
 For the tray-mode: waffles_env/bin/waffles-tray
-...
 
 To "uninstall" the virtual environment :
 
-...
 waffles_env/bin/waffles --reset  # removes cache and configurations files from HOME
 rm -rf waffles_env` (just remove the directory)
 ...
