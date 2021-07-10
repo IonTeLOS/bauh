@@ -11,7 +11,7 @@ DISCLAIMERS:
 2. Waffles does not imply that you can or should substitute all or most of your .deb files with AppImage, Flatpak, Snap and Web applications. Waffles is here to supplement conventional packages and software manager applications. More choice for users means more freedom. And Linux *is* about Freedom! Easier app management, less messing with dependencies - versions - distro-specific choices means that more non-technical users will be able to enjoy Linux.
 3. Waffles comes with ABSOLUTELY NO WARRANTY to the extent permitted by applicable law.
 
-An experimental [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.1/waffles_1.1-1_amd64.deb) of Waffles compatible with Debian Bullseye has been released. If you want to try it **now**, download it and run from the same directory you downloaded the .deb file to : sudo apt install ./waffles_1.1-1_amd64.deb
+An experimental [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.0/waffles_1.0-1_amd64.deb) of Waffles compatible with Debian Bullseye has been released. If you want to try it **now**, download it and run from the same directory you downloaded the .deb file to : sudo apt install ./waffles_1.0-1_amd64.deb (or what ever package name you are installing)
 
 This will take care of all necessary dependencies automatically.
 
