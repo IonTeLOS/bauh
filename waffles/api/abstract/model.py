@@ -225,8 +225,7 @@ class SoftwarePackage(ABC):
         custom 'version' update tooltip
         """
         return
-
-    @abstractmethod
+        
     def __str__(self):
         return '{} (id={}, name={})'.format(self.__class__.__name__, self.id, self.name)
 
