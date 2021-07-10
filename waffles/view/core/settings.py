@@ -104,15 +104,6 @@ class GenericSettingsManager:
                                             max_width=default_width,
                                             id_="icon_exp")
 
-        select_trim_up = new_select(label=self.i18n['core.config.trim.after_upgrade'],
-                                    tip=self.i18n['core.config.trim.after_upgrade.tip'],
-                                    value=core_config['disk']['trim']['after_upgrade'],
-                                    max_width=default_width,
-                                    opts=[(self.i18n['yes'].capitalize(), True, None),
-                                          (self.i18n['no'].capitalize(), False, None),
-                                          (self.i18n['ask'].capitalize(), None, None)],
-                                    id_='trim_after_upgrade')
-
         select_dep_check = self._gen_bool_component(label=self.i18n['core.config.system.dep_checking'],
                                                     tooltip=self.i18n['core.config.system.dep_checking.tip'],
                                                     value=core_config['system']['single_dependency_checking'],
@@ -127,7 +118,7 @@ class GenericSettingsManager:
 
         select_mthread_client = self._gen_multithread_client_select(core_config, default_width)
 
-        sub_comps = [FormComponent([select_dmthread, select_mthread_client, select_trim_up, select_dep_check, input_data_exp, input_icon_exp], spaces=False)]
+        sub_comps = [FormComponent([select_dmthread, select_mthread_client, select_dep_check, input_data_exp, input_icon_exp], spaces=False)]
         return TabComponent(self.i18n['core.config.tab.advanced'].capitalize(), PanelComponent(sub_comps), None, 'core.adv')
 
     def _gen_multithread_client_select(self, core_config: dict, default_width: int) -> SingleSelectComponent:
@@ -384,8 +375,6 @@ class GenericSettingsManager:
 
         icon_exp = adv_form.get_component('icon_exp').get_int_value()
         core_config['memory_cache']['icon_expiration'] = icon_exp
-
-        core_config['disk']['trim']['after_upgrade'] = adv_form.get_component('trim_after_upgrade').get_selected()
 
         # backup
         if backup:
