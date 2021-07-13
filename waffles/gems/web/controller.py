@@ -785,7 +785,7 @@ class WebApplicationManager(SoftwareManager):
     Exec={exec_path}
     {categories}
     {wmclass}
-        """)).format(name=pkg.name, exec_path=pkg.get_command(),
+        """.format(name=pkg.name, exec_path=pkg.get_command(),
                    desc=pkg.description or pkg.url, icon=pkg.get_disk_icon_path(),
                    categories='Categories={}'.format(';'.join(pkg.categories)) if pkg.categories else '',
                    wmclass="StartupWMClass={}".format(pkg.package_name) if pkg.package_name else '')
