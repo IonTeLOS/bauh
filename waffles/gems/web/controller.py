@@ -775,32 +775,16 @@ class WebApplicationManager(SoftwareManager):
 
         return TransactionResult(success=True, installed=[pkg], removed=[])
 
-    def ql(s, eol=True):
-        lines = s.splitlines()
-        l0 = None
-        if lines:
-            l0 = lines.pop(0) or None
-        common = commonprefix(lines)
-        indent = re.match(r'\s*', common)[0]
-        n = len(indent)
-        lines2 = [l[n:] for l in lines]
-        if not eol and lines2 and not lines2[-1]:
-            lines2.pop()
-        if l0 is not None:
-            lines2.insert(0, l0)
-        s2 = "\n".join(lines2)
-        return s2
-
     def _gen_desktop_entry_content(self, pkg: WebApplication) -> str:
-        return (ql("""
-        [Desktop Entry]
-        Type=Application
-        Name={name} (web)
-        Comment={desc}
-        Icon={icon}
-        Exec={exec_path}
-        {categories}
-        {wmclass}
+        return """
+    [Desktop Entry]
+    Type=Application
+    Name={name} (web)
+    Comment={desc}
+    Icon={icon}
+    Exec={exec_path}
+    {categories}
+    {wmclass}
         """)).format(name=pkg.name, exec_path=pkg.get_command(),
                    desc=pkg.description or pkg.url, icon=pkg.get_disk_icon_path(),
                    categories='Categories={}'.format(';'.join(pkg.categories)) if pkg.categories else '',
