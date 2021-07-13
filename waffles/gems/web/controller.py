@@ -6,6 +6,7 @@ import re
 import shutil
 import subprocess
 import traceback
+import textwrap
 from math import floor
 from pathlib import Path
 from threading import Thread
@@ -775,7 +776,7 @@ class WebApplicationManager(SoftwareManager):
         return TransactionResult(success=True, installed=[pkg], removed=[])
 
     def _gen_desktop_entry_content(self, pkg: WebApplication) -> str:
-        return """
+        return """\
     [Desktop Entry]
     Type=Application
     Name={name} (web)
