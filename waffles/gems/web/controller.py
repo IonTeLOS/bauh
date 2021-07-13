@@ -10,7 +10,6 @@ from math import floor
 from pathlib import Path
 from threading import Thread
 from typing import List, Type, Set, Tuple, Optional
-from os.path import commonprefix
 
 import requests
 import yaml
