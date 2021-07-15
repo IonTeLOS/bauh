@@ -777,13 +777,13 @@ class WebApplicationManager(SoftwareManager):
     def _gen_desktop_entry_content(self, pkg: WebApplication) -> str:
         return """
         [Desktop Entry]
-        Type=Application
-        Name={name} (web)
-        Comment={desc}
-        Icon={icon}
-        Exec={exec_path}
-        {categories}
-        {wmclass}
+Type=Application
+Name={name} (web)
+Comment={desc}
+Icon={icon}
+Exec={exec_path}
+{categories}
+{wmclass}
         """.format(name=pkg.name, exec_path=pkg.get_command(),
                    desc=pkg.description or pkg.url, icon=pkg.get_disk_icon_path(),
                    categories='Categories={}'.format(';'.join(pkg.categories)) if pkg.categories else '',
