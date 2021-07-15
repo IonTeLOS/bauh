@@ -776,7 +776,7 @@ class WebApplicationManager(SoftwareManager):
 
     def _gen_desktop_entry_content(self, pkg: WebApplication) -> str:
         return """
-        [Desktop Entry]
+[Desktop Entry]
 Type=Application
 Name={name} (web)
 Comment={desc}
