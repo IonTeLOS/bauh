@@ -11,7 +11,7 @@ DISCLAIMERS:
 2. Waffles does not imply that you can or should substitute all or most of your .deb files with AppImage, Flatpak, Snap and Web applications. Waffles is here to *supplement* conventional packages and software manager applications. More choice for users means more freedom. And Linux above all *is* about Freedom! Easier app management, less messing with dependencies - versions - distro-specific choices means that more non-technical users will be able to enjoy Linux.
 3. Waffles comes with ABSOLUTELY NO WARRANTY to the extent permitted by applicable law.
 
-A testing [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.0/waffles_1.0-1_amd64.deb) of Waffles, compatible with Debian Bullseye has been released. To try it **now**, download it and run following command from the same directory you downloaded the .deb file to : sudo apt install ./waffles_1.0-1_amd64.deb (or what ever package name you are installing)
+A testing [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.1/waffles_1.1-1_amd64.deb) of Waffles, compatible with Debian Bullseye has been released. To try it **now**, download it and run following command from the same directory you downloaded the .deb file to : sudo apt install ./waffles_1.0-1_amd64.deb (or what ever package name you are installing)
 
 This will take care of all necessary dependencies automatically.
 
@@ -21,7 +21,7 @@ Download it, open terminal in the same directory and run following command : chm
 
 You can then simply click the AppImage file to run the app.
 
-To be able to run the AppImage successfully, make sure you have already installed the prerequisites. Run this command in your terminal : 
+To be able to run the AppImage successfully, make sure you have already installed the prerequisites. Run this command in your terminal :
 
 sudo apt install python3 python3-pip python-pip-whl python3-wheel python3-distutils python3-lib2to3 python3-setuptools python3-dateutil python3-packaging python3-pyparsing python3-colorama python3-yaml libqt5designer5 libqt5help5 libqt5sql5 libqt5test5 libqt5xml5 python3-pyqt5 python3-pyqt5.sip python3-bs4 python3-lxml sqlite3 wget fuse3 aria2 axel python3-soupsieve python3-requests python3-xlib flatpak
 
@@ -43,7 +43,7 @@ Then type following commands:
 
 ```
 python3 -m venv waffles_env # creates an isolated environment inside the directory called "waffles_env"
-waffles_env/bin/pip install https://github.com/IonTeLOS/waffles/archive/refs/tags/1.0.tar.gz  # installs Waffles in the isolated environment (replace 0 with the actual release you are targeting)
+waffles_env/bin/pip install https://github.com/IonTeLOS/waffles/archive/refs/tags/1.1.tar.gz  # installs Waffles in the isolated environment (replace 0 with the actual release you are targeting)
 waffles_env/bin/waffles # launches Waffles.
 For the tray-mode: waffles_env/bin/waffles-tray
 
