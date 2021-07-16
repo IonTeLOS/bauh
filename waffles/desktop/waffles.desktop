@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Waffles App Control
+Categories=System;
+Comment=Launch, install and remove your Web - AppImage - Flatpak - Snap applications
+Exec=/usr/local/bin/waffles
+Icon=/usr/share/icons/waffles.png

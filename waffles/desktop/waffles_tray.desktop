@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Waffles@tray
+Categories=Utility;
+Comment=System tray utility for Waffles
+Exec=/usr/local/bin/waffles-tray
+Icon=/usr/share/icons/waffles_tray.svg

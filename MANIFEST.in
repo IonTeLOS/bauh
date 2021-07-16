@@ -1,0 +1,6 @@
+include LICENSE CHANGELOG.md README.md
+include requirements.txt
+recursive-include waffles/desktop *
+recursive-include waffles/view/resources *
+recursive-include waffles/gems/*/resources *
+recursive-include tests *
