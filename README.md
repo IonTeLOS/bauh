@@ -14,6 +14,7 @@ DISCLAIMERS:
 A testing [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.1/waffles_1.1-1_amd64.deb) of Waffles, compatible with Debian Bullseye has been released. To try it **now** add our repository to your sources: 
 
 curl -s --compressed "https://iontelos.github.io/repo/KEY.gpg" | sudo apt-key add -
+
 sudo curl -s --compressed -o /etc/apt/sources.list.d/my_list_file.list "https://iontelos.github.io/repo/my_list_file.list"
 
 Alternatively you can directly download the .deb file from our release and install it running following command from the same directory you downloaded the .deb file to : sudo apt install ./waffles_1.1-1_amd64.deb (or whatever package name you are installing)
