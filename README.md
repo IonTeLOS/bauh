@@ -11,7 +11,12 @@ DISCLAIMERS:
 2. Waffles does not imply that you can or should substitute all or most of your .deb files with AppImage, Flatpak, Snap and Web applications. Waffles is here to *supplement* conventional packages and software manager applications. More choice for users means more freedom. And Linux above all *is* about Freedom! Easier app management, less messing with dependencies - versions - distro-specific choices means that more non-technical users will be able to enjoy Linux.
 3. Waffles comes with ABSOLUTELY NO WARRANTY to the extent permitted by applicable law.
 
-A testing [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.1/waffles_1.1-1_amd64.deb) of Waffles, compatible with Debian Bullseye has been released. To try it **now**, download it and run following command from the same directory you downloaded the .deb file to : sudo apt install ./waffles_1.1-1_amd64.deb (or whatever package name you are installing)
+A testing [.deb package](https://github.com/IonTeLOS/waffles/releases/download/1.1/waffles_1.1-1_amd64.deb) of Waffles, compatible with Debian Bullseye has been released. To try it **now** add our repository to your sources: 
+
+curl -s --compressed "https://iontelos.github.io/repo/KEY.gpg" | sudo apt-key add -
+sudo curl -s --compressed -o /etc/apt/sources.list.d/my_list_file.list "https://iontelos.github.io/repo/my_list_file.list"
+
+Alternatively you can directly download the .deb file from our release and install it running following command from the same directory you downloaded the .deb file to : sudo apt install ./waffles_1.1-1_amd64.deb (or whatever package name you are installing)
 
 This will take care of all necessary dependencies automatically. Installing snapd is recommended (and necessary to manage Snap applications), but optional. If you choose to install snapd make sure you also install snap core. Follow the [official instructions](https://snapcraft.io/docs/installing-snapd).
 
